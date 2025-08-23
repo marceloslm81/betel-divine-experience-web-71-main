@@ -28,13 +28,13 @@ const HeroSection = () => {
       <div className="relative z-20 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto animate-fade-in">
           {/* Logo */}
-          <div className="mb-8">
+          {/*<div className="mb-8">
             <img 
               src="/lovable-uploads/9d9f394a-8ebc-41d0-b89d-c4bce783cfee.png" 
               alt="Ministério Encontro Betel" 
               className="h-32 w-auto mx-auto lg:h-60" 
             />
-          </div>
+          </div>*/}
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 font-playfair">

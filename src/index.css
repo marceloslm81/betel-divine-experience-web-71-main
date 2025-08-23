@@ -155,12 +155,25 @@ All colors MUST be HSL.
     animation: float-subtle 8s ease-in-out infinite;
   }
 
+  .animate-pulse-slow {
+    animation: pulse-slow 3s ease-in-out infinite;
+  }
+
   @keyframes float-subtle {
     0%, 100% {
       transform: translateY(0px);
     }
     50% {
       transform: translateY(-3px);
+    }
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
     }
   }
 }
