@@ -59,9 +59,21 @@ const AboutSection = () => {
 
             {/* Image */}
             <div className="animate-on-scroll">
-              <div className="relative">
-                <img src="/lovable-uploads/9d9f394a-8ebc-41d0-b89d-c4bce783cfee.png" alt="Igreja Encontro Betel" className="w-full h-auto object-contain rounded-2xl shadow-2xl" />
-                <div className="absolute inset-0 bg-gradient-to-t from-betel-red/20 to-transparent rounded-2xl"></div>
+              <div className="relative group">
+                {/* Subtle Border Effect */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-betel-red/20 to-orange-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                
+                {/* Main Image Container */}
+                <div className="relative">
+                  <img 
+                    src="/lovable-uploads/9d9f394a-8ebc-41d0-b89d-c4bce783cfee.png" 
+                    alt="Igreja Encontro Betel" 
+                    className="relative w-full h-auto object-contain rounded-2xl shadow-lg group-hover:shadow-xl transform transition-all duration-500 ease-in-out hover:scale-[1.02] animate-float-subtle" 
+                  />
+                  
+                  {/* Subtle Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-betel-red/10 via-transparent to-transparent rounded-2xl opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
+                </div>
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@ const EventsSection = () => {
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
   const events = [{
     title: "Culto",
-    date: "Toda Quarta",
+    date: "Toda Quarta-Feira",
     time: "19:30",
     location: "Encontro Betel - Vila Progresso",
     description: "Venha adorar e receber uma palavra de Deus que transformará sua vida.",
@@ -18,7 +18,7 @@ const EventsSection = () => {
 
   }, {
     title: "Culto",
-    date: "Toda Sexta",
+    date: "Toda Sexta-Feira",
     time: "19:30",
     location: "Encontro Betel - Vila Progresso",
     description: "Um momento especial de adoração, louvor e palavra de Deus.",

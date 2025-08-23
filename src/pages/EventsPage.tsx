@@ -29,7 +29,7 @@ const EventsPage = () => {
     pastor: "Pastora Maria Santos",
     dresscode: "Traje livre",
     parking: "Estacionamento gratuito disponível"
-  }*/, /*{
+  },*/ /*{
     title: "Escola Bíblica Dominical",
     date: "Todo Domingo",
     time: "17:00",
@@ -40,15 +40,15 @@ const EventsPage = () => {
     pastor: "Equipe de Professores",
     dresscode: "Traje casual",
     parking: "Estacionamento gratuito disponível"
-  }*/, {
-      title: "Conferência Encontro com Deus",
-      date: "15-17 Dezembro",
+  },*/ {
+      title: "Campanha de Quarta-Feira",
+      date: "20/08 à 10/09",
       time: "19:30",
-      location: "Templo Principal",
-      description: "Três dias de muito louvor, adoração e ministração da Palavra.",
+      location: "M. Encontro Betel Vila Progresso",
+      description: "Neemias 6:3B.",
       type: "special",
-      fullDescription: "Nossa conferência anual é um evento imperdível! Três dias de intensa ministração, louvor e adoração. Teremos pregadores especiais, ministração de cura e libertação, e momentos únicos na presença de Deus. Venha preparado para receber uma nova unção!",
-      pastor: "Pastores convidados e equipe local",
+      fullDescription: "Estou fazendo uma grande obra e nãoposso parar.",
+      pastor: "Miss. Claúdia, Dc. Thiago, Pr. Luz, Pr. Antonio, Miss. Flávia, Irmã Graça, Dc. Danilo",
       dresscode: "Traje social ou casual elegante",
       parking: "Estacionamento gratuito - chegue cedo"
     }, /*{
@@ -62,15 +62,15 @@ const EventsPage = () => {
     pastor: "Pastor Carlos Mendes",
     dresscode: "Traje casual",
     parking: "Estacionamento gratuito disponível"
-  }*/, {
-      title: "Vigília de Oração",
-      date: "Primeira Sexta do Mês",
+  },*/ {
+      title: "Campanha de Sexta-Feira",
+      date: "22/08 à 10/10",
       time: "19:30",
-      location: "Templo Principal",
-      description: "Uma noite inteira de oração e busca por Deus.",
+      location: "M. Encontro Betel Vila Progresso",
+      description: "Em busca do meu milagre.",
       type: "special",
-      fullDescription: "Uma vez por mês nos reunimos para uma vigília de oração que vai da noite até a madrugada. É um momento poderoso de quebrantamento, intercessão e busca pela presença de Deus.",
-      pastor: "Equipe Pastoral",
+      fullDescription: "Em busca do meu milagre.",
+      pastor: "Miss. Ivaneide, Miss. Mara, Pr. Fabricio, Pr. David, Miss Rute, Ir. Fernanda, Coop. Vitória",
       dresscode: "Traje confortável",
       parking: "Estacionamento seguro disponível"
     }, /*{
@@ -84,15 +84,15 @@ const EventsPage = () => {
     pastor: "Pastor Júnior Lima",
     dresscode: "Traje despojado",
     parking: "Estacionamento gratuito disponível"
-  }*/, {
-      title: "Encontro de Casais",
+  },*/ {
+      title: "Ceia do Senhor",
       date: "Todo Segundo Sábado",
       time: "19:30",
-      location: "Salão de Eventos",
-      description: "Ministração especial para casais e relacionamentos.",
+      location: "M. Encontro Betel Vila Progresso",
+      description: "Ministração especial ( Ceia ).",
       type: "special",
-      fullDescription: "Um encontro mensal dedicado aos casais, com ensinamentos sobre relacionamentos, família e vida conjugal baseados na Palavra de Deus. Inclui jantar e momentos de comunhão.",
-      pastor: "Pastor João e Pastora Ana",
+      fullDescription: "Na Ceia do Senhor, recordamos o sacrifício que nos trouxe vida, partilhamos do pão e do cálice em comunhão, renovando nossa fé e esperança em Cristo.",
+      pastor: "Pastor Edivaldo",
       dresscode: "Traje social",
       parking: "Estacionamento gratuito disponível"
     }];

@@ -41,7 +41,7 @@ const Footer = () => {
             <div className="lg:col-span-2">
               <div className="mb-6">
                 <img
-                  src="/lovable-uploads/logo-encontro-betel.png"
+                  src="/lovable-uploads/betel.jpg"
                   alt="Ministério Encontro Betel"
                   className="h-16 w-auto"
                 />
@@ -140,9 +140,11 @@ const Footer = () => {
                 © 2025 Igreja Encontro Betel. Todos os direitos reservados. Desenvolvido pela empresa{' '}
                 <button
                   onClick={handleDvelloperClick}
-                  className="text-betel-gold hover:text-betel-red transition-colors underline"
+                  className="relative inline-flex items-center px-3 py-1 bg-gradient-to-r from-betel-gold to-yellow-500 text-betel-gray-dark font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group overflow-hidden"
                 >
-                  DVELLOPER
+                  <span className="relative z-10">DVELLOPER</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-betel-red to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-betel-gold to-yellow-500 group-hover:opacity-0 transition-opacity duration-300 rounded-lg"></div>
                 </button>
               </p>
 

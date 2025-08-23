@@ -150,4 +150,17 @@ All colors MUST be HSL.
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   }
+
+  .animate-float-subtle {
+    animation: float-subtle 8s ease-in-out infinite;
+  }
+
+  @keyframes float-subtle {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
 }
