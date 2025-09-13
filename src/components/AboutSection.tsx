@@ -24,7 +24,7 @@ const AboutSection = () => {
           {/* Section Header */}
           <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-4xl md:text-5xl font-bold text-betel-gray-dark mb-6 font-playfair">
-              Sobre a <span className="text-gradient">Encontro Betel</span>
+              Sobre o <span className="text-gradient">Ministério Encontro Betel</span>
             </h2>
             <p className="text-xl text-betel-gray max-w-3xl mx-auto leading-relaxed">
               Somos uma igreja que acredita no poder transformador de Jesus Cristo, 

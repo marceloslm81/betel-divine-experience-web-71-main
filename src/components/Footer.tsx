@@ -20,7 +20,7 @@ const Footer = () => {
   };
 
   const handlePhoneClick = () => {
-    window.open('tel:+5511999999999', '_self');
+    window.open('tel:+5511989073079', '_self');
   };
 
   const handleEmailClick = () => {
@@ -116,7 +116,7 @@ const Footer = () => {
                     onClick={handlePhoneClick}
                     className="text-gray-300 text-sm hover:text-betel-gold transition-colors"
                   >
-                    (11) 99999-9999
+                    (11) 98907-3079
                   </button>
                 </li>
                 <li className="flex items-center space-x-3">

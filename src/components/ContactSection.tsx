@@ -1,179 +1,120 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MessageSquare, Send } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import React from 'react';
+import { Mail, Phone, MessageSquare, MapPin, Clock } from 'lucide-react';
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-
-    // Criar link mailto com os dados do formulário
-    const subject = `Contato do site - ${formData.name}`;
-    const body = `Nome: ${formData.name}
-E-mail: ${formData.email}
-${formData.phone ? `Telefone: ${formData.phone}` : ''}
-
-Mensagem:
-${formData.message}
-
----
-Enviado através do formulário de contato do site da Igreja Encontro Betel`;
-    const mailtoLink = `mailto:enbetel@enbetel.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    // Abrir cliente de email
-    window.location.href = mailtoLink;
-
-    // Mostrar confirmação
-    alert('Seu cliente de email será aberto para enviar a mensagem. Se não abrir automaticamente, envie um email para: enbetel@enbetel.com.br');
-
-    // Limpar formulário
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
-  };
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/5511999999999', '_blank');
+    window.open('https://wa.me/5511989073079', '_blank');
   };
   const handlePhoneClick = () => {
-    window.open('tel:+551133334444', '_self');
+    window.open('tel:+5511989073079', '_self');
   };
   const handleEmailClick = () => {
     window.open('mailto:enbetel@enbetel.com.br', '_self');
   };
-  return <section id="contact" className="py-20 bg-betel-gray-light">
+  return (
+    <section id="contact" className="py-20 bg-betel-gray-light">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-4xl md:text-5xl font-bold text-betel-gray-dark mb-6 font-playfair">
               Fale <span className="text-gradient">Conosco</span>
             </h2>
             <p className="text-xl text-betel-gray max-w-3xl mx-auto leading-relaxed">
-              Estamos aqui para ouvir você. Entre em contato conosco!
+              Estamos aqui para ouvir você. Entre em contato conosco através dos canais abaixo!
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="animate-on-scroll">
-              <div className="bg-white rounded-3xl shadow-2xl p-8">
-                <h3 className="text-2xl font-bold text-betel-gray-dark mb-8 font-playfair text-center">
-                  Envie sua Mensagem
+          {/* Contact Methods Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* WhatsApp */}
+            <div className="bg-white rounded-3xl shadow-2xl p-8 text-center hover-lift animate-on-scroll">
+              <button onClick={handleWhatsAppClick} className="w-full">
+                <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MessageSquare className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-betel-gray-dark mb-3 font-playfair">
+                  WhatsApp
                 </h3>
+                <p className="text-betel-gray mb-2">
+                  Fale conosco pelo WhatsApp
+                </p>
+                <p className="text-lg font-semibold text-green-600">
+                  (11) 98907-3079
+                </p>
+              </button>
+            </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-betel-gray-dark mb-2">
-                      Nome Completo
-                    </label>
-                    <Input id="name" name="name" type="text" required value={formData.name} onChange={handleInputChange} className="w-full px-4 py-3 rounded-lg border border-betel-gray focus:ring-2 focus:ring-betel-red focus:border-transparent" placeholder="Digite seu nome completo" />
-                  </div>
+            {/* Phone */}
+            <div className="bg-white rounded-3xl shadow-2xl p-8 text-center hover-lift animate-on-scroll">
+              <button onClick={handlePhoneClick} className="w-full">
+                <div className="w-16 h-16 bg-gradient-betel rounded-full flex items-center justify-center mx-auto mb-4 bg-orange-400">
+                  <Phone className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-betel-gray-dark mb-3 font-playfair">
+                  Telefone
+                </h3>
+                <p className="text-betel-gray mb-2">
+                  Ligue para nós
+                </p>
+                <p className="text-lg font-semibold text-betel-red">
+                  (11) 98907-3079
+                </p>
+              </button>
+            </div>
 
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-betel-gray-dark mb-2">
-                      E-mail
-                    </label>
-                    <Input id="email" name="email" type="email" required value={formData.email} onChange={handleInputChange} className="w-full px-4 py-3 rounded-lg border border-betel-gray focus:ring-2 focus:ring-betel-red focus:border-transparent" placeholder="seu@email.com" />
-                  </div>
+            {/* Email */}
+            <div className="bg-white rounded-3xl shadow-2xl p-8 text-center hover-lift animate-on-scroll">
+              <button onClick={handleEmailClick} className="w-full">
+                <div className="w-16 h-16 bg-gradient-betel rounded-full flex items-center justify-center mx-auto mb-4 bg-gray-800">
+                  <Mail className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-betel-gray-dark mb-3 font-playfair">
+                  E-mail
+                </h3>
+                <p className="text-betel-gray mb-2">
+                  Envie um e-mail
+                </p>
+                <p className="text-lg font-semibold text-betel-blue">
+                  enbetel@enbetel.com.br
+                </p>
+              </button>
+            </div>
+          </div>
 
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-betel-gray-dark mb-2">
-                      Telefone (Opcional)
-                    </label>
-                    <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleInputChange} className="w-full px-4 py-3 rounded-lg border border-betel-gray focus:ring-2 focus:ring-betel-red focus:border-transparent" placeholder="(11) 99999-9999" />
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-betel-gray-dark mb-2">
-                      Mensagem
-                    </label>
-                    <Textarea id="message" name="message" required rows={5} value={formData.message} onChange={handleInputChange} className="w-full px-4 py-3 rounded-lg border border-betel-gray focus:ring-2 focus:ring-betel-red focus:border-transparent resize-none" placeholder="Digite sua mensagem aqui..." />
-                  </div>
-
-                  <Button type="submit" size="lg" className="w-full bg-betel-red hover:bg-betel-red-dark text-white py-3 rounded-full font-semibold hover-lift group">
-                    <Send className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform" />
-                    Enviar Mensagem
-                  </Button>
-                </form>
+          {/* Additional Info */}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Office Hours */}
+            <div className="bg-gradient-to-br from-betel-gold-light to-betel-yellow rounded-3xl p-8 animate-on-scroll">
+              <div className="text-center">
+                <Clock className="w-12 h-12 text-betel-red mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-betel-gray-dark mb-6 font-playfair">
+                  Horário de Atendimento
+                </h3>
+                <div className="text-betel-gray-dark space-y-2">
+                  <p className="font-semibold">Segunda a Sexta: 9h às 17h</p>
+                  <p className="font-semibold">Sábado: 9h às 12h</p>
+                  <p className="font-semibold">Domingo: Durante os cultos</p>
+                </div>
               </div>
             </div>
 
-            {/* Contact Info */}
-            <div className="animate-on-scroll">
-              <div className="space-y-8">
-                {/* Contact Methods */}
-                <div className="bg-white rounded-3xl shadow-2xl p-8">
-                  <h3 className="text-2xl font-bold text-betel-gray-dark mb-8 font-playfair text-center">
-                    Outras Formas de Contato
-                  </h3>
-
-                  <div className="space-y-6">
-                    {/* WhatsApp */}
-                    <button onClick={handleWhatsAppClick} className="flex items-center space-x-4 p-4 rounded-xl hover:bg-betel-gray-light transition-colors cursor-pointer w-full">
-                      <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                        <MessageSquare className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="text-left">
-                        <h4 className="text-lg font-semibold text-betel-gray-dark">
-                          WhatsApp
-                        </h4>
-                        <p className="text-betel-gray">(11) 99999-9999</p>
-                      </div>
-                    </button>
-
-                    {/* Phone */}
-                    <button onClick={handlePhoneClick} className="flex items-center space-x-4 p-4 rounded-xl hover:bg-betel-gray-light transition-colors cursor-pointer w-full">
-                      <div className="w-12 h-12 bg-gradient-betel rounded-full flex items-center justify-center bg-orange-400">
-                        <Phone className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="text-left">
-                        <h4 className="text-lg font-semibold text-betel-gray-dark">
-                          Telefone
-                        </h4>
-                        <p className="text-betel-gray">(11) 3333-4444</p>
-                      </div>
-                    </button>
-
-                    {/* Email */}
-                    <button onClick={handleEmailClick} className="flex items-center space-x-4 p-4 rounded-xl hover:bg-betel-gray-light transition-colors cursor-pointer w-full">
-                      <div className="w-12 h-12 bg-gradient-betel rounded-full flex items-center justify-center bg-gray-800">
-                        <Mail className="w-6 h-6 text-white" />
-                      </div>
-                      <div className="text-left">
-                        <h4 className="text-lg font-semibold text-betel-gray-dark">
-                          E-mail
-                        </h4>
-                        <p className="text-betel-gray">enbetel@enbetel.com.br</p>
-                      </div>
-                    </button>
+            {/* Locations */}
+            <div className="bg-white rounded-3xl shadow-2xl p-8 animate-on-scroll">
+              <div className="text-center">
+                <MapPin className="w-12 h-12 text-betel-red mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-betel-gray-dark mb-6 font-playfair">
+                  Nossos Endereços
+                </h3>
+                <div className="space-y-4 text-left">
+                  <div>
+                    <h4 className="font-bold text-betel-gray-dark mb-1">Sede - Jardim Palmira</h4>
+                    <p className="text-betel-gray text-sm">R. Jaime dos Santos Augusto Filho, 52</p>
+                    <p className="text-betel-gray text-sm">Guarulhos - SP</p>
                   </div>
-                </div>
-
-                {/* Office Hours */}
-                <div className="bg-gradient-to-br from-betel-gold-light to-betel-yellow rounded-3xl p-8">
-                  <h3 className="text-xl font-bold text-betel-gray-dark mb-4 font-playfair text-center">
-                    Horário de Atendimento
-                  </h3>
-                  <div className="text-center text-betel-gray-dark space-y-2">
-                    <p>Segunda a Sexta: 9h às 17h</p>
-                    <p>Sábado: 9h às 12h</p>
-                    <p>Domingo: Apenas durante os cultos</p>
+                  <div>
+                    <h4 className="font-bold text-betel-gray-dark mb-1">Vila Progresso</h4>
+                    <p className="text-betel-gray text-sm">R. Cardon, 1192 - Jardim Ipanema</p>
+                    <p className="text-betel-gray text-sm">São Paulo - SP</p>
                   </div>
                 </div>
               </div>
@@ -181,6 +122,7 @@ Enviado através do formulário de contato do site da Igreja Encontro Betel`;
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 export default ContactSection;

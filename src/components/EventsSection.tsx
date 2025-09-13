@@ -5,9 +5,10 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Link } from 'react-router-dom';
 const EventsSection = () => {
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
-  const events = [{
+  
+  const eventsVilaProgresso = [{
     title: "Culto",
-    date: "Toda Quarta-Feira",
+    date: "Todas as Quartas-Feiras",
     time: "19:30",
     location: "Encontro Betel - Vila Progresso",
     description: "Venha adorar e receber uma palavra de Deus que transformará sua vida.",
@@ -18,7 +19,7 @@ const EventsSection = () => {
 
   }, {
     title: "Culto",
-    date: "Toda Sexta-Feira",
+    date: "Todas as Sextas-Feiras",
     time: "19:30",
     location: "Encontro Betel - Vila Progresso",
     description: "Um momento especial de adoração, louvor e palavra de Deus.",
@@ -29,7 +30,7 @@ const EventsSection = () => {
 
   }, {
     title: "Culto da Família",
-    date: "Todo Domingo",
+    date: "Todos os Domingos",
     time: "18:00",
     location: "Encontro Betel - Vila Progresso",
     description: "Louvor e Palavra de Deus para toda a família.",
@@ -37,38 +38,61 @@ const EventsSection = () => {
     fullDescription: "Nossa igreja é um lugar de louvor e adoração. Venha participar deste momento de intimidade com Deus.",
     pastor: "Presbítero Celso",
     dresscode: "Traje casual",
+  }];
 
-  }, {
-    title: "Inauguração Encontro Betel Vila Progresso",
-    date: "29-30 Agosto",
+  const eventsVilaPalmira = [{
+    title: "Culto de Adoração",
+    date: "Todas as Terças-Feiras",
     time: "19:00",
-    location: "Encontro Betel - Vila Progresso",
-    description: "Dois dias de muito louvor, adoração e ministração da Palavra.",
-    type: "special",
-    fullDescription: "Um evento imperdível! Dois dias de intensa ministração, louvor e adoração. Teremos pregadores especiais, ministração de cura e libertação, e momentos únicos na presença de Deus. Venha preparado para receber uma nova unção!",
-    pastor: "Pastor...",
-    dresscode: "Traje social ou casual elegante",
-
+    location: "Encontro Betel - Vila Palmira",
+    description: "Momento de intimidade e adoração ao Senhor.",
+    type: "regular",
+    fullDescription: "Um culto especial dedicado à adoração e louvor. Venha experimentar a presença de Deus em um ambiente de intimidade e reverência.",
+    pastor: "Pastor Responsável",
+    dresscode: "Traje casual",
+  }, {
+    title: "Culto de Ensino",
+    date: "Todas as Quintas-Feiras",
+    time: "19:30",
+    location: "Encontro Betel - Vila Palmira",
+    description: "Estudo bíblico e crescimento espiritual.",
+    type: "regular",
+    fullDescription: "Momento dedicado ao estudo da Palavra de Deus e crescimento espiritual. Venha aprender e crescer na fé.",
+    pastor: "Pastor Responsável",
+    dresscode: "Traje casual",
+  }, {
+    title: "Culto Dominical",
+    date: "Todos os Domingos",
+    time: "19:00",
+    location: "Encontro Betel - Vila Palmira",
+    description: "Celebração dominical com toda a família.",
+    type: "regular",
+    fullDescription: "Nossa celebração dominical é um momento especial para toda a família. Venha participar deste momento de comunhão e adoração.",
+    pastor: "Pastor Responsável",
+    dresscode: "Traje social ou casual",
   }];
   return <section id="events" className="py-20 bg-white">
     <div className="container mx-auto px-4">
       <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16 animate-on-scroll">
+        {/* Section Header Vila Progresso */}
+          <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-betel-gray-dark mb-6 font-playfair">
-            Próximos <span className="text-gradient">Eventos</span>
+            Eventos <span className="text-gradient">Encontro Betel Vila Progresso</span>
           </h2>
           <p className="text-xl text-betel-gray max-w-3xl mx-auto leading-relaxed">
             Participe dos nossos encontros e viva momentos especiais na presença de Deus
           </p>
         </div>
 
-        {/* Events Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {events.map((event, index) => <div key={index} className="bg-white rounded-2xl shadow-lg p-6 hover-lift animate-on-scroll group border border-betel-gray-light">
-            {event.type === 'special' && <div className="inline-block bg-betel-red text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">
-              Especial
-            </div>}
+        {/* Events Grid Vila Progresso - 3 cards per row */}
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {eventsVilaProgresso.map((event, index) => (
+            <div key={index} className="bg-white rounded-2xl shadow-lg p-6 hover-lift animate-on-scroll group border border-betel-gray-light">
+              {event.type === 'special' && (
+                <div className="inline-block bg-betel-red text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                  Especial
+                </div>
+              )}
 
             <h3 className="text-xl font-bold text-betel-gray-dark mb-3 font-playfair">
               {event.title}
@@ -93,18 +117,87 @@ const EventsSection = () => {
               </div>
             </div>
 
-            <Button variant="outline" className="w-full border-betel-red text-betel-red hover:bg-betel-red hover:text-white transition-all duration-300 group" onClick={() => setSelectedEvent(event)}>
+            <Button 
+              variant="outline" 
+              className="w-full border-betel-red text-betel-red hover:bg-betel-red hover:text-white transition-all duration-300 group" 
+              onClick={() => setSelectedEvent(event)}
+            >
               Saiba Mais
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-          </div>)}
+          </div>
+          ))}
         </div>
 
-        {/* CTA Button */}
+        {/* CTA Button Vila Progresso */}
+        <div className="text-center animate-on-scroll mb-20">
+          <Link to="/eventos">
+            <Button size="lg" className="bg-betel-red hover:bg-betel-red-dark text-white px-8 py-3 rounded-full font-semibold hover-lift">
+              Ver Todos os Eventos - Vila Progresso
+            </Button>
+          </Link>
+        </div>
+
+        {/* Section Header Vila Palmira */}
+        <div className="text-center mb-16 animate-on-scroll">
+          <h2 className="text-4xl md:text-5xl font-bold text-betel-gray-dark mb-6 font-playfair">
+            Eventos <span className="text-gradient">Encontro Betel Sede Vila Palmira</span>
+          </h2>
+          <p className="text-xl text-betel-gray max-w-3xl mx-auto leading-relaxed">
+            Venha participar dos nossos encontros na sede Vila Palmira
+          </p>
+        </div>
+
+        {/* Events Grid Vila Palmira - 3 cards per row */}
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {eventsVilaPalmira.map((event, index) => (
+            <div key={index} className="bg-white rounded-2xl shadow-lg p-6 hover-lift animate-on-scroll group border border-betel-gray-light">
+              {event.type === 'special' && (
+                <div className="inline-block bg-betel-red text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                  Especial
+                </div>
+              )}
+
+              <h3 className="text-xl font-bold text-betel-gray-dark mb-3 font-playfair">
+                {event.title}
+              </h3>
+              <p className="text-betel-gray mb-4 leading-relaxed">
+                {event.description}
+              </p>
+
+              {/* Event Details */}
+              <div className="space-y-2 mb-4">
+                <div className="flex items-center text-betel-gray">
+                  <Calendar className="w-4 h-4 mr-2 text-betel-red" />
+                  <span className="text-sm">{event.date}</span>
+                </div>
+                <div className="flex items-center text-betel-gray">
+                  <Clock className="w-4 h-4 mr-2 text-betel-red" />
+                  <span className="text-sm">{event.time}</span>
+                </div>
+                <div className="flex items-center text-betel-gray">
+                  <MapPin className="w-4 h-4 mr-2 text-betel-red" />
+                  <span className="text-sm">{event.location}</span>
+                </div>
+              </div>
+
+              <Button 
+                variant="outline" 
+                className="w-full border-betel-red text-betel-red hover:bg-betel-red hover:text-white transition-all duration-300 group" 
+                onClick={() => setSelectedEvent(event)}
+              >
+                Saiba Mais
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA Button Vila Palmira */}
         <div className="text-center animate-on-scroll">
           <Link to="/eventos">
             <Button size="lg" className="bg-betel-red hover:bg-betel-red-dark text-white px-8 py-3 rounded-full font-semibold hover-lift">
-              Ver Todos os Eventos
+              Ver Todos os Eventos - Vila Palmira
             </Button>
           </Link>
         </div>
@@ -123,7 +216,8 @@ const EventsSection = () => {
           </DialogDescription>
         </DialogHeader>
 
-        {selectedEvent && <div className="space-y-6">
+        {selectedEvent && (
+          <div className="space-y-6">
           <div className="bg-betel-gray-light rounded-lg p-4">
             <h4 className="font-semibold text-betel-gray-dark mb-2">Detalhes do Evento:</h4>
             <div className="space-y-2 text-sm text-betel-gray">
@@ -159,7 +253,8 @@ const EventsSection = () => {
           </div>
 
 
-        </div>}
+        </div>
+        )}
       </DialogContent>
     </Dialog>
   </section>;

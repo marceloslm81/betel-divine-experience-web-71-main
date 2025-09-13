@@ -26,7 +26,7 @@ const DevotionalsPage = () => {
       reference: "Jeremias 29:11",
       reflection: "Deus tem um plano perfeito para sua vida. Mesmo nas dificuldades, Ele está trabalhando para o seu bem. Confie nos planos d'Ele, pois são planos de esperança e futuro próspero.",
       category: "esperanca",
-      date: "04 Jan 2024"
+      date: "04 Jan 2025"
     },
     {
       title: "O Amor Que Transforma",
@@ -34,7 +34,7 @@ const DevotionalsPage = () => {
       reference: "1 João 3:16",
       reflection: "O verdadeiro amor é sacrificial. Cristo nos amou primeiro e deu sua vida por nós. Esse mesmo amor deve fluir através de nós para outros, transformando nossa vida e relacionamentos.",
       category: "amor",
-      date: "03 Jan 2024"
+      date: "03 Jan 2025"
     },
     {
       title: "A Força na Fraqueza",
@@ -42,7 +42,7 @@ const DevotionalsPage = () => {
       reference: "2 Coríntios 12:9",
       reflection: "Quando reconhecemos nossa fraqueza, Deus demonstra Seu poder. Não precisamos ser perfeitos ou ter todas as respostas. Na nossa fragilidade, Ele Se revela forte e suficiente.",
       category: "fe",
-      date: "02 Jan 2024"
+      date: "02 Jan 2025"
     },
     {
       title: "Renovando as Forças",
@@ -50,7 +50,7 @@ const DevotionalsPage = () => {
       reference: "Isaías 40:31",
       reflection: "Quando estamos cansados e desanimados, podemos encontrar renovação em Deus. Ele nos dá forças para continuar, nos capacita a voar acima das circunstâncias e nos sustenta na jornada.",
       category: "esperanca",
-      date: "01 Jan 2024"
+      date: "01 Jan 2025"
     },
     {
       title: "Paz em Meio à Tempestade",
@@ -58,7 +58,7 @@ const DevotionalsPage = () => {
       reference: "João 16:33",
       reflection: "Jesus não promete ausência de problemas, mas promete Sua paz em meio às dificuldades. Ele já venceu todas as batalhas que enfrentamos. Em Cristo, podemos ter paz verdadeira.",
       category: "paz",
-      date: "31 Dez 2023"
+      date: "31 Dez 2024"
     },
     {
       title: "O Bom Pastor",
@@ -66,7 +66,7 @@ const DevotionalsPage = () => {
       reference: "Salmos 23:1-2",
       reflection: "Como um pastor cuida de suas ovelhas, Deus cuida de nós. Ele nos guia, nos protege e supre todas as nossas necessidades. Podemos descansar em Seu cuidado amoroso.",
       category: "cuidado",
-      date: "30 Dez 2023"
+      date: "30 Dez 2024"
     },
     {
       title: "Perdão e Restauração",
@@ -74,7 +74,7 @@ const DevotionalsPage = () => {
       reference: "1 João 1:9",
       reflection: "O perdão de Deus está sempre disponível. Não importa o que fizemos, quando confessamos nossos erros com sinceridade, Ele nos perdoa completamente e nos restaura.",
       category: "perdao",
-      date: "29 Dez 2023"
+      date: "29 Dez 2024"
     },
     {
       title: "Sabedoria Divina",
@@ -82,7 +82,7 @@ const DevotionalsPage = () => {
       reference: "Tiago 1:5",
       reflection: "Quando enfrentamos decisões difíceis ou situações complexas, podemos pedir sabedoria a Deus. Ele nos dará discernimento e direção quando buscamos Sua orientação com fé.",
       category: "sabedoria",
-      date: "28 Dez 2023"
+      date: "28 Dez 2024"
     },
     {
       title: "Alegria do Senhor",
@@ -90,7 +90,7 @@ const DevotionalsPage = () => {
       reference: "Neemias 8:10",
       reflection: "A alegria que vem do Senhor não depende das circunstâncias. É uma fonte de força que nos sustenta nos momentos difíceis e nos capacita a vencer os desafios da vida.",
       category: "alegria",
-      date: "27 Dez 2023"
+      date: "27 Dez 2024"
     },
     {
       title: "Confiança Inabalável",
@@ -98,7 +98,7 @@ const DevotionalsPage = () => {
       reference: "Provérbios 3:5",
       reflection: "Nossa compreensão é limitada, mas Deus vê o quadro completo. Quando confiamos n'Ele completamente, mesmo sem entender tudo, Ele dirige nossos passos no caminho certo.",
       category: "confianca",
-      date: "26 Dez 2023"
+      date: "26 Dez 2024"
     },
     {
       title: "Oração Poderosa",
@@ -106,7 +106,7 @@ const DevotionalsPage = () => {
       reference: "1 Tessalonicenses 5:17",
       reflection: "A oração não é apenas um ritual, mas uma conversa contínua com Deus. Podemos falar com Ele a qualquer momento, sobre qualquer coisa. Ele sempre está disposto a nos ouvir.",
       category: "oracao",
-      date: "25 Dez 2023"
+      date: "25 Dez 2024"
     },
     {
       title: "Generosidade Divina",
@@ -114,7 +114,7 @@ const DevotionalsPage = () => {
       reference: "Lucas 6:38",
       reflection: "Deus é generoso e nos chama a ser generosos também. Quando damos com amor, Ele multiplica de volta para nós de maneiras inesperadas. A generosidade abre as portas das bênçãos divinas.",
       category: "generosidade",
-      date: "24 Dez 2023"
+      date: "24 Dez 2024"
     },
     {
       title: "Propósito Divino",
@@ -122,7 +122,7 @@ const DevotionalsPage = () => {
       reference: "Romanos 8:28",
       reflection: "Mesmo quando não entendemos o porquê das situações, Deus está trabalhando tudo para o nosso bem. Ele tem um propósito em cada experiência e usa tudo para nos moldar à imagem de Cristo.",
       category: "proposito",
-      date: "23 Dez 2023"
+      date: "23 Dez 2024"
     },
     {
       title: "Paciência e Perseverança",
@@ -130,7 +130,7 @@ const DevotionalsPage = () => {
       reference: "Isaías 40:31",
       reflection: "A paciência é uma virtude que se desenvolve na espera. Quando aprendemos a esperar no tempo de Deus, desenvolvemos perseverança e nossa fé se fortalece.",
       category: "paciencia",
-      date: "22 Dez 2023"
+      date: "22 Dez 2024"
     },
     {
       title: "Luz nas Trevas",
@@ -138,7 +138,7 @@ const DevotionalsPage = () => {
       reference: "Salmos 119:105",
       reflection: "A Palavra de Deus é nossa bússola na vida. Quando estamos confusos ou perdidos, ela ilumina o caminho e nos mostra a direção certa a seguir.",
       category: "orientacao",
-      date: "21 Dez 2023"
+      date: "21 Dez 2024"
     },
     {
       title: "Comunhão Verdadeira",
@@ -146,7 +146,7 @@ const DevotionalsPage = () => {
       reference: "1 João 1:7",
       reflection: "A verdadeira comunhão acontece quando vivemos na luz de Deus. Relacionamentos autênticos são construídos na transparência, amor e perdão mútuos.",
       category: "comunhao",
-      date: "20 Dez 2023"
+      date: "20 Dez 2024"
     },
     {
       title: "Gratidão Constante",
@@ -154,7 +154,7 @@ const DevotionalsPage = () => {
       reference: "1 Tessalonicenses 5:18",
       reflection: "A gratidão transforma nossa perspectiva. Mesmo nas dificuldades, podemos encontrar motivos para agradecer. Um coração grato é um coração que reconhece as bênçãos de Deus.",
       category: "gratidao",
-      date: "19 Dez 2023"
+      date: "19 Dez 2024"
     },
     {
       title: "Vitória Assegurada",
@@ -162,7 +162,7 @@ const DevotionalsPage = () => {
       reference: "2 Coríntios 2:14",
       reflection: "Em Cristo, já somos mais que vencedores. As batalhas que enfrentamos já foram vencidas por Jesus. Podemos caminhar com confiança, sabendo que a vitória é nossa.",
       category: "vitoria",
-      date: "18 Dez 2023"
+      date: "18 Dez 2024"
     },
     {
       title: "Humildade Verdadeira",
@@ -170,7 +170,7 @@ const DevotionalsPage = () => {
       reference: "1 Pedro 5:6",
       reflection: "A humildade não é fraqueza, mas reconhecimento da grandeza de Deus. Quando nos humilhamos diante d'Ele, Ele nos honra e nos exalta no tempo certo.",
       category: "humildade",
-      date: "17 Dez 2023"
+      date: "17 Dez 2024"
     },
     {
       title: "Amor Incondicional",
@@ -178,7 +178,7 @@ const DevotionalsPage = () => {
       reference: "Romanos 5:8",
       reflection: "O amor de Deus não depende do nosso comportamento. Ele nos ama incondicionalmente, mesmo quando falhamos. Este amor incondicional nos transforma e nos capacita a amar outros.",
       category: "amor",
-      date: "16 Dez 2023"
+      date: "16 Dez 2024"
     },
     // Novos 50 devocionais
     {
@@ -187,7 +187,7 @@ const DevotionalsPage = () => {
       reference: "Apocalipse 3:20",
       reflection: "Jesus está sempre à porta do nosso coração, esperando pacientemente que O convidemos a entrar. Ele deseja ter comunhão íntima conosco e transformar nossa vida.",
       category: "esperanca",
-      date: "15 Dez 2023"
+      date: "15 Dez 2024"
     },
     {
       title: "Fé Como Grão de Mostarda",
@@ -195,7 +195,7 @@ const DevotionalsPage = () => {
       reference: "Mateus 17:20",
       reflection: "Não é o tamanho da nossa fé que importa, mas a grandeza do Deus em quem confiamos. Uma pequena fé em um grande Deus pode mover montanhas.",
       category: "fe",
-      date: "14 Dez 2023"
+      date: "14 Dez 2024"
     },
     {
       title: "Provisão Abundante",
@@ -203,7 +203,7 @@ const DevotionalsPage = () => {
       reference: "Filipenses 4:19",
       reflection: "Deus conhece todas as nossas necessidades e promete supri-las abundantemente. Podemos confiar que Ele nunca nos faltará com o que precisamos.",
       category: "cuidado",
-      date: "13 Dez 2023"
+      date: "13 Dez 2024"
     },
     {
       title: "Descanso Para a Alma",
@@ -211,7 +211,7 @@ const DevotionalsPage = () => {
       reference: "Mateus 11:28",
       reflection: "Jesus oferece descanso verdadeiro para nossa alma cansada. Nele encontramos alívio das cargas pesadas e paz para o coração inquieto.",
       category: "paz",
-      date: "12 Dez 2023"
+      date: "12 Dez 2024"
     },
     {
       title: "Transformação Interior",
@@ -219,7 +219,7 @@ const DevotionalsPage = () => {
       reference: "2 Coríntios 3:18",
       reflection: "Quando contemplamos a Jesus, somos gradualmente transformados à Sua imagem. A mudança acontece de dentro para fora, pela obra do Espírito Santo.",
       category: "transformacao",
-      date: "11 Dez 2023"
+      date: "11 Dez 2024"
     },
     {
       title: "Servo de Todos",
@@ -227,7 +227,7 @@ const DevotionalsPage = () => {
       reference: "Marcos 9:35",
       reflection: "A verdadeira grandeza no Reino de Deus é medida pelo serviço. Quando servimos outros com amor, refletimos o coração de Cristo.",
       category: "servico",
-      date: "10 Dez 2023"
+      date: "10 Dez 2024"
     },
     {
       title: "Santidade Necessária",
@@ -235,7 +235,7 @@ const DevotionalsPage = () => {
       reference: "1 Pedro 1:15",
       reflection: "Deus nos chama para uma vida de santidade. Isso significa viver de forma diferente do mundo, refletindo o caráter de Cristo em tudo que fazemos.",
       category: "santidade",
-      date: "09 Dez 2023"
+      date: "09 Dez 2024"
     },
     {
       title: "Unidade no Espírito",
@@ -243,7 +243,7 @@ const DevotionalsPage = () => {
       reference: "Efésios 4:3",
       reflection: "A unidade entre os cristãos é preciosa para Deus. Devemos nos esforçar para manter a harmonia e a paz na comunidade da fé.",
       category: "unidade",
-      date: "08 Dez 2023"
+      date: "08 Dez 2024"
     },
     {
       title: "Esperança Que Não Falha",
@@ -251,7 +251,7 @@ const DevotionalsPage = () => {
       reference: "Romanos 8:24",
       reflection: "Nossa esperança em Deus vai além do que vemos. Confiamos nas promessas divinas mesmo quando as circunstâncias parecem contrárias.",
       category: "esperanca",
-      date: "07 Dez 2023"
+      date: "07 Dez 2024"
     },
     {
       title: "Fruto do Espírito",
@@ -259,7 +259,7 @@ const DevotionalsPage = () => {
       reference: "Gálatas 5:22-23",
       reflection: "O Espírito Santo produz em nós qualidades divinas. Essas virtudes são evidências da presença de Deus em nossa vida.",
       category: "fruto",
-      date: "06 Dez 2023"
+      date: "06 Dez 2024"
     },
     {
       title: "Palavra Viva",
@@ -267,7 +267,7 @@ const DevotionalsPage = () => {
       reference: "Hebreus 4:12",
       reflection: "A Palavra de Deus tem poder transformador. Ela penetra em nosso coração, revela nossos pensamentos e produz mudança real.",
       category: "palavra",
-      date: "05 Dez 2023"
+      date: "05 Dez 2024"
     },
     {
       title: "Misericórdia Renovada",
@@ -275,7 +275,7 @@ const DevotionalsPage = () => {
       reference: "Lamentações 3:22",
       reflection: "A misericórdia de Deus se renova a cada manhã. Não importa quantas vezes falhamos, Sua compaixão permanece constante.",
       category: "misericordia",
-      date: "04 Dez 2023"
+      date: "04 Dez 2024"
     },
     {
       title: "Proteção Divina",
@@ -283,7 +283,7 @@ const DevotionalsPage = () => {
       reference: "Salmos 34:7",
       reflection: "Deus oferece proteção sobrenatural àqueles que O temem. Seus anjos estão constantemente nos guardando e nos livrando do mal.",
       category: "protecao",
-      date: "03 Dez 2023"
+      date: "03 Dez 2024"
     },
     {
       title: "Crescimento na Graça",
@@ -291,7 +291,7 @@ const DevotionalsPage = () => {
       reference: "2 Pedro 3:18",
       reflection: "O crescimento espiritual é um processo contínuo. Devemos buscar constantemente conhecer mais de Cristo e crescer em Sua graça.",
       category: "crescimento",
-      date: "02 Dez 2023"
+      date: "02 Dez 2024"
     },
     {
       title: "Fortaleza no Senhor",
@@ -299,7 +299,7 @@ const DevotionalsPage = () => {
       reference: "Efésios 6:10",
       reflection: "Nossa força não vem de nós mesmos, mas do Senhor. Em Sua força podemos enfrentar qualquer desafio ou adversidade.",
       category: "fortaleza",
-      date: "01 Dez 2023"
+      date: "01 Dez 2024"
     },
     {
       title: "Louvor em Toda Circunstância",
@@ -307,7 +307,7 @@ const DevotionalsPage = () => {
       reference: "Salmos 107:1",
       reflection: "O louvor deve ser nossa resposta natural à bondade de Deus. Ele é digno de louvor em todas as circunstâncias da vida.",
       category: "louvor",
-      date: "30 Nov 2023"
+      date: "30 Nov 2024"
     },
     {
       title: "Restauração Completa",
@@ -315,7 +315,7 @@ const DevotionalsPage = () => {
       reference: "1 Pedro 5:10",
       reflection: "Deus usa nossas dificuldades para nos aperfeiçoar. Após o sofrimento, Ele nos restaura completamente e nos torna mais fortes.",
       category: "restauracao",
-      date: "29 Nov 2023"
+      date: "29 Nov 2024"
     },
     {
       title: "Luz do Mundo",
@@ -323,7 +323,7 @@ const DevotionalsPage = () => {
       reference: "Mateus 5:14",
       reflection: "Como cristãos, somos chamados a ser luz em meio às trevas do mundo. Nossa vida deve refletir a luz de Cristo para outros.",
       category: "testemunho",
-      date: "28 Nov 2023"
+      date: "28 Nov 2024"
     },
     {
       title: "Perseverança na Corrida",
@@ -331,7 +331,7 @@ const DevotionalsPage = () => {
       reference: "Hebreus 12:1-2",
       reflection: "A vida cristã é como uma corrida que requer perseverança. Devemos manter nossos olhos fixos em Jesus, que nos capacita a continuar.",
       category: "perseveranca",
-      date: "27 Nov 2023"
+      date: "27 Nov 2024"
     },
     {
       title: "Dons Espirituais",
@@ -339,7 +339,7 @@ const DevotionalsPage = () => {
       reference: "1 Coríntios 12:7",
       reflection: "Deus concede dons espirituais a cada cristão para edificar o corpo de Cristo. Devemos descobrir e usar nossos dons para glorificar a Deus.",
       category: "dons",
-      date: "26 Nov 2023"
+      date: "26 Nov 2024"
     },
     {
       title: "Contentamento Verdadeiro",
@@ -347,7 +347,7 @@ const DevotionalsPage = () => {
       reference: "Filipenses 4:11",
       reflection: "O contentamento não depende das circunstâncias externas, mas de nossa atitude interior. Podemos aprender a estar satisfeitos em Cristo.",
       category: "contentamento",
-      date: "25 Nov 2023"
+      date: "25 Nov 2024"
     },
     {
       title: "Novo Nascimento",
@@ -355,7 +355,7 @@ const DevotionalsPage = () => {
       reference: "João 3:3",
       reflection: "O novo nascimento é essencial para entrar no Reino de Deus. É uma transformação completa que acontece quando aceitamos Cristo.",
       category: "salvacao",
-      date: "24 Nov 2023"
+      date: "24 Nov 2024"
     },
     {
       title: "Disciplina do Amor",
@@ -363,7 +363,7 @@ const DevotionalsPage = () => {
       reference: "Hebreus 12:6",
       reflection: "A disciplina de Deus é expressão do Seu amor. Ele nos corrige não para nos punir, mas para nos formar à imagem de Cristo.",
       category: "disciplina",
-      date: "23 Nov 2023"
+      date: "23 Nov 2024"
     },
     {
       title: "Herança Incorruptível",
@@ -371,7 +371,7 @@ const DevotionalsPage = () => {
       reference: "1 Pedro 1:4",
       reflection: "Nossa herança em Cristo é eterna e incorruptível. As riquezas celestiais que nos aguardam são muito superiores a qualquer tesouro terreno.",
       category: "heranca",
-      date: "22 Nov 2023"
+      date: "22 Nov 2024"
     },
     {
       title: "Armadura de Deus",
@@ -379,7 +379,7 @@ const DevotionalsPage = () => {
       reference: "Efésios 6:11",
       reflection: "Enfrentamos uma batalha espiritual real. Deus nos fornece toda a armadura necessária para vencermos as estratégias do inimigo.",
       category: "guerra",
-      date: "21 Nov 2023"
+      date: "21 Nov 2024"
     },
     {
       title: "Sal da Terra",
@@ -387,7 +387,7 @@ const DevotionalsPage = () => {
       reference: "Mateus 5:13",
       reflection: "Como sal, devemos preservar e dar sabor ao mundo ao nosso redor. Nossa presença deve fazer diferença na sociedade.",
       category: "influencia",
-      date: "20 Nov 2023"
+      date: "20 Nov 2024"
     },
     {
       title: "Comunhão dos Santos",
@@ -395,7 +395,7 @@ const DevotionalsPage = () => {
       reference: "Atos 2:42",
       reflection: "A comunhão cristã é fundamental para o crescimento espiritual. Precisamos uns dos outros para crescer na fé e no amor.",
       category: "comunhao",
-      date: "19 Nov 2023"
+      date: "19 Nov 2024"
     },
     {
       title: "Testemunhas Fiéis",
@@ -403,7 +403,7 @@ const DevotionalsPage = () => {
       reference: "Atos 1:8",
       reflection: "Somos chamados a ser testemunhas de Cristo, capacitados pelo Espírito Santo. Nossa vida e palavras devem apontar para Jesus.",
       category: "testemunho",
-      date: "18 Nov 2023"
+      date: "18 Nov 2024"
     },
     {
       title: "Imitadores de Cristo",
@@ -411,7 +411,7 @@ const DevotionalsPage = () => {
       reference: "Efésios 5:1",
       reflection: "Como filhos de Deus, devemos imitar nosso Pai celestial. Isso significa refletir Seu caráter de amor, santidade e justiça.",
       category: "imitacao",
-      date: "17 Nov 2023"
+      date: "17 Nov 2024"
     },
     {
       title: "Esperança da Glória",
@@ -419,7 +419,7 @@ const DevotionalsPage = () => {
       reference: "Colossenses 1:27",
       reflection: "Cristo em nós é nossa esperança de glória. Sua presença interior nos garante um futuro glorioso com Ele.",
       category: "gloria",
-      date: "16 Nov 2023"
+      date: "16 Nov 2024"
     },
     {
       title: "Edificação Mútua",
@@ -427,7 +427,7 @@ const DevotionalsPage = () => {
       reference: "Romanos 14:19",
       reflection: "Devemos buscar a paz e a edificação mútua na comunidade cristã. Nossas ações e palavras devem construir e não destruir.",
       category: "edificacao",
-      date: "15 Nov 2023"
+      date: "15 Nov 2024"
     },
     {
       title: "Refúgio Seguro",
@@ -435,7 +435,7 @@ const DevotionalsPage = () => {
       reference: "Salmos 46:1",
       reflection: "Em momentos de dificuldade, Deus é nosso refúgio seguro. Podemos correr para Ele e encontrar proteção e força.",
       category: "refugio",
-      date: "14 Nov 2023"
+      date: "14 Nov 2024"
     },
     {
       title: "Pureza de Coração",
@@ -443,7 +443,7 @@ const DevotionalsPage = () => {
       reference: "Mateus 5:8",
       reflection: "A pureza de coração nos capacita a ver e conhecer a Deus mais intimamente. Devemos buscar a santidade interior.",
       category: "pureza",
-      date: "13 Nov 2023"
+      date: "13 Nov 2024"
     },
     {
       title: "Chamado Santo",
@@ -451,7 +451,7 @@ const DevotionalsPage = () => {
       reference: "2 Timóteo 1:9",
       reflection: "Deus nos salvou e nos chamou para uma vida santa. Este chamado não é baseado em nossos méritos, mas em Sua graça.",
       category: "chamado",
-      date: "12 Nov 2023"
+      date: "12 Nov 2024"
     },
     {
       title: "Coroa da Vida",
@@ -459,7 +459,7 @@ const DevotionalsPage = () => {
       reference: "Tiago 1:12",
       reflection: "Aqueles que perseveram nas tentações e provações receberão a coroa da vida. A fidelidade em meio às dificuldades será recompensada.",
       category: "recompensa",
-      date: "11 Nov 2023"
+      date: "11 Nov 2024"
     },
     {
       title: "Vencedores em Cristo",
@@ -467,7 +467,7 @@ const DevotionalsPage = () => {
       reference: "Romanos 8:37",
       reflection: "Em Cristo, somos mais que vencedores sobre todas as adversidades. O amor de Deus nos torna vitoriosos em qualquer situação.",
       category: "vitoria",
-      date: "10 Nov 2023"
+      date: "10 Nov 2024"
     },
     {
       title: "Poder da Ressurreição",
@@ -475,7 +475,7 @@ const DevotionalsPage = () => {
       reference: "Filipenses 3:10",
       reflection: "O poder que ressuscitou Jesus está disponível para nós. Este mesmo poder nos capacita a viver uma vida vitoriosa.",
       category: "ressurreicao",
-      date: "09 Nov 2023"
+      date: "09 Nov 2024"
     },
     {
       title: "Mansidão e Humildade",
@@ -483,7 +483,7 @@ const DevotionalsPage = () => {
       reference: "Mateus 11:29",
       reflection: "Jesus nos convida a aprender Sua mansidão e humildade. Essas qualidades trazem descanso e paz para nossa alma.",
       category: "mansidao",
-      date: "08 Nov 2023"
+      date: "08 Nov 2024"
     },
     {
       title: "Fidelidade de Deus",
@@ -491,7 +491,7 @@ const DevotionalsPage = () => {
       reference: "1 Coríntios 1:9",
       reflection: "Deus é absolutamente fiel em todas as Suas promessas. Podemos confiar completamente em Sua palavra e caráter imutável.",
       category: "fidelidade",
-      date: "07 Nov 2023"
+      date: "07 Nov 2024"
     },
     {
       title: "Cura Interior",
@@ -499,7 +499,7 @@ const DevotionalsPage = () => {
       reference: "Salmos 147:3",
       reflection: "Deus é especialista em curar corações quebrantados. Ele tem compaixão de nossas dores e nos restaura completamente.",
       category: "cura",
-      date: "06 Nov 2023"
+      date: "06 Nov 2024"
     },
     {
       title: "Liberdade em Cristo",
@@ -507,7 +507,7 @@ const DevotionalsPage = () => {
       reference: "Gálatas 5:1",
       reflection: "Cristo nos libertou para vivermos em verdadeira liberdade. Não devemos voltar aos antigos padrões de escravidão espiritual.",
       category: "liberdade",
-      date: "05 Nov 2023"
+      date: "05 Nov 2024"
     },
     {
       title: "Gozo Completo",
@@ -515,7 +515,7 @@ const DevotionalsPage = () => {
       reference: "João 15:11",
       reflection: "Jesus deseja que experimentemos Seu gozo de forma completa. Esta alegria divina não depende das circunstâncias externas.",
       category: "gozo",
-      date: "04 Nov 2023"
+      date: "04 Nov 2024"
     },
     {
       title: "Morada do Espírito",
@@ -523,7 +523,7 @@ const DevotionalsPage = () => {
       reference: "1 Coríntios 3:16",
       reflection: "Nosso corpo é templo do Espírito Santo. Esta verdade deve influenciar como cuidamos de nós mesmos e como vivemos.",
       category: "templo",
-      date: "03 Nov 2023"
+      date: "03 Nov 2024"
     },
     {
       title: "Justiça de Deus",
@@ -531,7 +531,7 @@ const DevotionalsPage = () => {
       reference: "2 Coríntios 5:21",
       reflection: "Em Cristo, recebemos a justiça de Deus. Jesus levou nossos pecados para que pudéssemos receber Sua retidão.",
       category: "justica",
-      date: "02 Nov 2023"
+      date: "02 Nov 2024"
     },
     {
       title: "Amor Perfeito",
@@ -539,7 +539,7 @@ const DevotionalsPage = () => {
       reference: "1 João 4:18",
       reflection: "O amor perfeito de Deus remove todos os nossos medos. Quando conhecemos verdadeiramente Seu amor, vivemos sem temor.",
       category: "amor",
-      date: "01 Nov 2023"
+      date: "01 Nov 2024"
     }
   ];
 
