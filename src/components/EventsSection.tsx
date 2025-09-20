@@ -188,7 +188,7 @@ const EventsSection = () => {
         <div className="text-center animate-on-scroll">
           <Link to="/eventos">
             <Button size="lg" className="bg-betel-red hover:bg-betel-red-dark text-white px-8 py-3 rounded-full font-semibold hover-lift">
-              Ver Todos os Eventos - Jardim Palmira
+              Ver Todos os Eventos
             </Button>
           </Link>
         </div>
