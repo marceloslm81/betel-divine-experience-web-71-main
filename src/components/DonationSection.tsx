@@ -3,7 +3,7 @@ import { Heart, Shield, CreditCard, Smartphone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 const DonationSection = () => {
   const handleDoacaoPixVilaProgresso = () => {
-    const pixKey = 'vilaprogresso@enbetel.com.br';
+    const pixKey = 'progresso@enbetel.com.br';
     const message = `Chave PIX - Betel Vila Progresso:\n\n${pixKey}\n\nObrigado por contribuir com a obra de Deus! 🙏`;
 
     if (navigator.clipboard) {
@@ -18,7 +18,7 @@ const DonationSection = () => {
   };
 
   const handleDoacaoPixSede = () => {
-    const pixKey = 'sede@enbetel.com.br';
+    const pixKey = 'enbetel@enbetel.com.br';
     const message = `Chave PIX - Sede Jardim Palmira:\n\n${pixKey}\n\nObrigado por contribuir com a obra de Deus! 🙏`;
 
     if (navigator.clipboard) {

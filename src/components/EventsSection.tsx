@@ -129,19 +129,10 @@ const EventsSection = () => {
           ))}
         </div>
 
-        {/* CTA Button Vila Progresso */}
-        <div className="text-center animate-on-scroll mb-20">
-          <Link to="/eventos">
-            <Button size="lg" className="bg-betel-red hover:bg-betel-red-dark text-white px-8 py-3 rounded-full font-semibold hover-lift">
-              Ver Todos os Eventos - Vila Progresso
-            </Button>
-          </Link>
-        </div>
-
         {/* Section Header Vila Palmira */}
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-betel-gray-dark mb-6 font-playfair">
-            Eventos <span className="text-gradient">Encontro Betel Sede Vila Palmira</span>
+            Eventos <span className="text-gradient">Encontro Betel Sede Jardim Palmira</span>
           </h2>
           <p className="text-xl text-betel-gray max-w-3xl mx-auto leading-relaxed">
             Venha participar dos nossos encontros na sede Vila Palmira
@@ -197,7 +188,7 @@ const EventsSection = () => {
         <div className="text-center animate-on-scroll">
           <Link to="/eventos">
             <Button size="lg" className="bg-betel-red hover:bg-betel-red-dark text-white px-8 py-3 rounded-full font-semibold hover-lift">
-              Ver Todos os Eventos - Vila Palmira
+              Ver Todos os Eventos - Jardim Palmira
             </Button>
           </Link>
         </div>
