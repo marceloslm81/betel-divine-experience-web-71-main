@@ -48,17 +48,17 @@ const EventsSection = () => {
     description: "Momento de intimidade e adoração ao Senhor.",
     type: "regular",
     fullDescription: "Um culto especial dedicado à adoração e louvor. Venha experimentar a presença de Deus em um ambiente de intimidade e reverência.",
-    pastor: "Pastor Responsável",
+    pastor: "Pastor Edvaldo",
     dresscode: "Traje casual",
   }, {
-    title: "Culto de Ensino",
-    date: "Todas as Quintas-Feiras",
-    time: "19:30",
+    title: "Círculo de Oração",
+    date: "Todas as Quartas-Feiras",
+    time: "15:00",
     location: "Encontro Betel - Vila Palmira",
     description: "Estudo bíblico e crescimento espiritual.",
     type: "regular",
     fullDescription: "Momento dedicado ao estudo da Palavra de Deus e crescimento espiritual. Venha aprender e crescer na fé.",
-    pastor: "Pastor Responsável",
+    pastor: "Miss. Cláudia",
     dresscode: "Traje casual",
   }, {
     title: "Culto Dominical",
@@ -68,7 +68,7 @@ const EventsSection = () => {
     description: "Celebração dominical com toda a família.",
     type: "regular",
     fullDescription: "Nossa celebração dominical é um momento especial para toda a família. Venha participar deste momento de comunhão e adoração.",
-    pastor: "Pastor Responsável",
+    pastor: "Pastor Edvaldo",
     dresscode: "Traje social ou casual",
   }];
   return <section id="events" className="py-20 bg-white">

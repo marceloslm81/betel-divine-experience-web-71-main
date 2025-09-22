@@ -39,7 +39,7 @@ const LocationSection = () => {
 
           {/* Sede Vila Palmira */}
           <div className="mb-16">
-            <h3 className="text-3xl font-bold text-betel-gray-dark mb-8 font-playfair text-center">
+            <h3 className="text-4xl font-bold text-betel-gray-dark mb-8 font-playfair text-center">
               Encontro Betel Sede - <span className="text-gradient">Jardim Palmira</span>
             </h3>
             
@@ -147,7 +147,7 @@ const LocationSection = () => {
 
           {/* Vila Progresso */}
           <div>
-            <h3 className="text-3xl font-bold text-betel-gray-dark mb-8 font-playfair text-center">
+            <h3 className="text-4xl font-bold text-betel-gray-dark mb-8 font-playfair text-center">
               Encontro Betel - <span className="text-gradient">Vila Progresso</span>
             </h3>
             
