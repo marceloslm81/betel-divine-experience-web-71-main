@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BookOpen, Heart, ArrowLeft, Search, Calendar, Tag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -12,6 +12,8 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { Share, Copy } from 'lucide-react';
 
 const DevotionalsPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -799,6 +801,28 @@ const DevotionalsPage = () => {
       </div>
     </div>
   );
+
+  const [selectedDevotional, setSelectedDevotional] = useState<any | null>(null);
+
+  const handleShare = (devotional: any) => {
+    const text = `${devotional.title}\n\n"${devotional.verse}"\n${devotional.reference}\n\n${devotional.reflection}`;
+    if (navigator.share) {
+      navigator.share({ title: devotional.title, text, url: window.location.href }).catch(() => {});
+    } else if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(text).then(() => alert('Devocional copiado para compartilhar!'));
+    } else {
+      alert(text);
+    }
+  };
+
+  const handleCopyVerse = (devotional: any) => {
+    const text = `"${devotional.verse}" — ${devotional.reference}`;
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(text).then(() => alert('Versículo copiado!'));
+    } else {
+      alert(text);
+    }
+  };
 };
 
 export default DevotionalsPage;

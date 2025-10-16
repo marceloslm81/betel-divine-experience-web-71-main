@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Youtube, Instagram, Play } from 'lucide-react';
 
-const HeroSection = () => {
+function HeroSection() {
   const handleYouTubeClick = () => {
     window.open('https://www.youtube.com/@igrejaencontrobetel', '_blank');
   };
@@ -42,30 +42,21 @@ const HeroSection = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-2xl mb-6 md:mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
             Seja bem-vindo à Igreja Ministério Encontro Betel, onde vidas são transformadas através do amor de Cristo.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              onClick={handleYouTubeClick} 
-              className="bg-betel-red hover:bg-betel-red-dark text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover-lift group"
-            >
-              <Youtube className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-              Assista no YouTube
-            </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg" 
-              onClick={handleInstagramClick} 
-              className="border-2 border-white hover:bg-white px-8 py-3 rounded-full font-semibold transition-all duration-300 hover-lift group text-red-900"
-            >
-              <Instagram className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-              Nos siga no Instagram
-            </Button>
+          {/* Destaques (sem botões) */}
+          <div className="mt-4 md:mt-6 flex flex-wrap justify-center gap-3">
+            <span className="px-4 py-2 rounded-full text-sm font-semibold bg-white/10 text-white border border-white/30 backdrop-blur-sm">
+              Comunhão
+            </span>
+            <span className="px-4 py-2 rounded-full text-sm font-semibold bg-white/10 text-white border border-white/30 backdrop-blur-sm">
+              Adoração
+            </span>
+            <span className="px-4 py-2 rounded-full text-sm font-semibold bg-white/10 text-white border border-white/30 backdrop-blur-sm">
+              Palavra
+            </span>
           </div>
 
           {/* Scroll Indicator */}

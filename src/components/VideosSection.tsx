@@ -8,7 +8,7 @@ const VideosSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const videos = [
-    {
+    /*{
       title: "Como Viver uma Vida de Propósito",
       thumbnail: "https://img.youtube.com/vi/B9UUOCAnehE/maxresdefault.jpg",
       videoId: "B9UUOCAnehE",
@@ -55,11 +55,11 @@ const VideosSection = () => {
       duration: "33:20",
       views: "13.8k",
       date: "há 1 mês"
-    }
+    }*/
   ];
 
   const handleAcessarYouTube = () => {
-    window.open('https://www.youtube.com/@igrejaencontrobetel', '_blank');
+    window.open('https://www.youtube.com/@mencontrobetel', '_blank');
   };
 
   const handleVideoClick = (video) => {
@@ -89,43 +89,47 @@ const VideosSection = () => {
 
             {/* Videos Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-              {videos.map((video, index) => (
-                <div 
-                  key={index} 
-                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift animate-on-scroll group cursor-pointer"
+              {videos.slice(0, 3).map((video, index) => (
+                <div
+                  key={index}
+                  className="group relative overflow-hidden rounded-3xl border-2 border-betel-gray-light bg-white/90 backdrop-blur shadow-lg hover:shadow-2xl hover-lift transform-gpu transition-all hover:scale-[1.02] ring-1 ring-transparent ring-offset-1 ring-offset-white hover:ring-betel-red cursor-pointer"
                   onClick={() => handleVideoClick(video)}
                 >
-                  {/* Video Thumbnail */}
-                  <div className="relative">
+                  <div className="absolute -top-12 -right-12 w-36 h-36 bg-betel-red/15 rounded-full blur-2xl pointer-events-none" />
+                  <div className="absolute -bottom-12 -left-12 w-40 h-40 bg-betel-gold/15 rounded-full blur-2xl pointer-events-none" />
+
+                  <div className="relative aspect-video">
                     <img
                       src={video.thumbnail}
                       alt={video.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/15 to-transparent group-hover:from-black/60 group-hover:via-black/25 transition-colors duration-300" />
 
-                    {/* Play Button */}
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 bg-betel-red rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <Play className="w-6 h-6 text-white ml-1" fill="currentColor" />
+                      <div className="w-16 h-16 gradient-betel rounded-full flex items-center justify-center shadow-xl ring-2 ring-white/60 group-hover:scale-110 transition-transform duration-300">
+                        <Play className="w-6 h-6 text-white ml-1" />
                       </div>
                     </div>
 
-                    {/* Duration */}
-                    <div className="absolute bottom-3 right-3 bg-black/70 text-white px-2 py-1 rounded text-sm">
+                    <div className="absolute bottom-3 right-3 bg-black/60 backdrop-blur text-white px-2 py-1 rounded-full text-xs">
                       {video.duration}
+                    </div>
+                    <div className="absolute bottom-3 left-3 flex gap-2">
+                      <span className="bg-white/80 backdrop-blur text-betel-gray-dark px-2 py-1 rounded-full text-xs font-medium">
+                        {video.views} visualizações
+                      </span>
+                      <span className="bg-white/80 backdrop-blur text-betel-gray-dark px-2 py-1 rounded-full text-xs font-medium">
+                        {video.date}
+                      </span>
                     </div>
                   </div>
 
-                  {/* Video Info */}
                   <div className="p-6">
                     <h3 className="text-lg font-bold text-betel-gray-dark mb-3 font-playfair line-clamp-2 group-hover:text-betel-red transition-colors">
                       {video.title}
                     </h3>
-                    <div className="flex items-center justify-between text-sm text-betel-gray">
-                      <span>{video.views} visualizações</span>
-                      <span>{video.date}</span>
-                    </div>
                   </div>
                 </div>
               ))}

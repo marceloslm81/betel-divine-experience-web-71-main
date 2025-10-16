@@ -80,17 +80,37 @@ const AboutSection = () => {
 
           {/* Values Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => <div key={index} className="text-center p-6 bg-white rounded-2xl shadow-lg hover-lift animate-on-scroll">
-                <div className="w-16 h-16 bg-gradient-betel rounded-full flex items-center justify-center mx-auto mb-4 bg-orange-500">
+            {values.map((value, index) => (
+              <div
+                key={index}
+                className="group relative p-6 bg-white/90 backdrop-blur rounded-3xl border border-betel-gray-light shadow-lg hover:shadow-2xl hover-lift transition-all duration-500 transform-gpu hover:scale-[1.02] overflow-hidden"
+              >
+                {/* Decorações sutis com gradiente da paleta Betel */}
+                <div className="absolute -top-12 -right-12 w-36 h-36 bg-betel-red/15 rounded-full blur-2xl" />
+                <div className="absolute -bottom-12 -left-12 w-40 h-40 bg-betel-gold/15 rounded-full blur-2xl" />
+
+                {/* Ícone com gradiente e anel */}
+                <div className="w-16 h-16 gradient-betel rounded-full flex items-center justify-center mx-auto mb-4 ring-2 ring-white/60 shadow-md group-hover:shadow-lg transition-all duration-500">
                   <value.icon className="w-8 h-8 text-white" />
                 </div>
-                <h4 className="text-xl font-bold text-betel-gray-dark mb-3 font-playfair">
+
+                {/* Título com micro-interação de cor */}
+                <h4 className="text-xl font-bold text-betel-gray-dark mb-3 font-playfair group-hover:text-betel-red transition-colors">
                   {value.title}
                 </h4>
+
+                {/* Barra de destaque abaixo do título */}
+                <div className="mx-auto mb-4 h-1.5 w-16 rounded-full bg-gradient-to-r from-betel-red to-betel-gold opacity-70 group-hover:opacity-100 transition-opacity"></div>
+
+                {/* Descrição */}
                 <p className="text-betel-gray leading-relaxed">
                   {value.description}
                 </p>
-              </div>)}
+
+                {/* Véu de brilho suave no hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-white/0 via-betel-gold/5 to-betel-red/10"></div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

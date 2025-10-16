@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, MapPin, ArrowRight, X } from 'lucide-react';
+import { Calendar, Clock, MapPin, ArrowRight, X, Navigation, Share } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Link } from 'react-router-dom';
@@ -51,26 +51,29 @@ const EventsSection = () => {
     pastor: "Pastor Edvaldo",
     dresscode: "Traje casual",
   }, {
-    title: "Círculo de Oração",
-    date: "Todas as Quartas-Feiras",
-    time: "15:00",
-    location: "Encontro Betel - Vila Palmira",
-    description: "Estudo bíblico e crescimento espiritual.",
-    type: "regular",
-    fullDescription: "Momento dedicado ao estudo da Palavra de Deus e crescimento espiritual. Venha aprender e crescer na fé.",
-    pastor: "Miss. Cláudia",
-    dresscode: "Traje casual",
-  }, {
-    title: "Culto Dominical",
+      title: "Culto de Adoração",
+      date: "Todos os Sábados",
+      time: "19:00",
+      location: "M. Encontro Betel Sede Jardim Palmira",
+      description: "Culto noturno de adoração e ministração da Palavra.",
+      type: "regular",
+      fullDescription: "Nosso culto sabatino é um momento especial para encerrar a semana em adoração. Venha participar deste culto de louvor, adoração e ministração da Palavra de Deus.",
+      pastor: "Pastor Edvaldo e Miss. Cláudia",
+      dresscode: "Traje casual ou social",
+      parking: "Estacionamento amplo disponível"
+    },
+   {
+    title: "Culto Da Família",
     date: "Todos os Domingos",
     time: "19:00",
     location: "Encontro Betel - Vila Palmira",
-    description: "Celebração dominical com toda a família.",
+    description: "Celebração com toda a família e ministração da Palavra.",
     type: "regular",
-    fullDescription: "Nossa celebração dominical é um momento especial para toda a família. Venha participar deste momento de comunhão e adoração.",
+    fullDescription: "Nossa celebração é um momento especial para toda a família. Venha participar deste momento de comunhão e adoração.",
     pastor: "Pastor Edvaldo",
     dresscode: "Traje social ou casual",
   }];
+
   return <section id="events" className="py-20 bg-white">
     <div className="container mx-auto px-4">
       <div className="max-w-6xl mx-auto">
@@ -87,45 +90,56 @@ const EventsSection = () => {
         {/* Events Grid Vila Progresso - 3 cards per row */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {eventsVilaProgresso.map((event, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-lg p-6 hover-lift animate-on-scroll group border border-betel-gray-light">
+            <div
+              key={index}
+              className="relative overflow-hidden rounded-2xl p-6 transform-gpu transition-all duration-300 group
+                   bg-gradient-to-br from-betel-gold-light to-white border-2 border-betel-gold
+                   hover:-translate-y-1 hover:shadow-2xl hover:border-betel-yellow
+                   ring-1 ring-transparent ring-offset-1 ring-offset-white hover:ring-betel-gold"
+            >
+              <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-betel-gold-light opacity-30 blur-2xl" />
               {event.type === 'special' && (
-                <div className="inline-block bg-betel-red text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                <div className="inline-block bg-gradient-to-r from-betel-gold to-betel-yellow text-white px-3 py-1 rounded-full text-sm font-semibold mb-3">
                   Especial
                 </div>
               )}
+              <div className="inline-block bg-betel-gold text-white px-2 py-1 rounded-full text-xs font-semibold mb-3">
+                Vila Progresso
+              </div>
 
-            <h3 className="text-xl font-bold text-betel-gray-dark mb-3 font-playfair">
-              {event.title}
-            </h3>
-            <p className="text-betel-gray mb-4 leading-relaxed">
-              {event.description}
-            </p>
+              <h3 className="text-xl font-bold text-betel-gray-dark mb-3 font-playfair">
+                {event.title}
+              </h3>
+              <p className="text-betel-gray mb-4 leading-relaxed">
+                {event.description}
+              </p>
 
-            {/* Event Details */}
-            <div className="space-y-2 mb-4">
-              <div className="flex items-center text-betel-gray">
-                <Calendar className="w-4 h-4 mr-2 text-betel-red" />
-                <span className="text-sm">{event.date}</span>
+              {/* Event Details */}
+              <div className="space-y-2 mb-4">
+                <div className="flex items-center text-betel-gray">
+                  <Calendar className="w-4 h-4 mr-2 text-betel-gold group-hover:scale-110 transition-transform" />
+                  <span className="text-sm">{event.date}</span>
+                </div>
+                <div className="flex items-center text-betel-gray">
+                  <Clock className="w-4 h-4 mr-2 text-betel-gold group-hover:scale-110 transition-transform" />
+                  <span className="text-sm">{event.time}</span>
+                </div>
+                <div className="flex items-center text-betel-gray">
+                  <MapPin className="w-4 h-4 mr-2 text-betel-gold group-hover:scale-110 transition-transform" />
+                  <span className="text-sm">{event.location}</span>
+                </div>
               </div>
-              <div className="flex items-center text-betel-gray">
-                <Clock className="w-4 h-4 mr-2 text-betel-red" />
-                <span className="text-sm">{event.time}</span>
-              </div>
-              <div className="flex items-center text-betel-gray">
-                <MapPin className="w-4 h-4 mr-2 text-betel-red" />
-                <span className="text-sm">{event.location}</span>
-              </div>
+
+              <Button
+                variant="outline"
+                className="w-full border-betel-gold text-betel-gold hover:bg-betel-gold hover:text-white transition-all duration-300
+                     group hover:shadow-md rounded-xl"
+                onClick={() => setSelectedEvent(event)}
+              >
+                Saiba Mais
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
             </div>
-
-            <Button 
-              variant="outline" 
-              className="w-full border-betel-red text-betel-red hover:bg-betel-red hover:text-white transition-all duration-300 group" 
-              onClick={() => setSelectedEvent(event)}
-            >
-              Saiba Mais
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </div>
           ))}
         </div>
 
@@ -142,12 +156,22 @@ const EventsSection = () => {
         {/* Events Grid Vila Palmira - 3 cards per row */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {eventsVilaPalmira.map((event, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-lg p-6 hover-lift animate-on-scroll group border border-betel-gray-light">
+            <div
+              key={index}
+              className="relative overflow-hidden rounded-2xl p-6 transform-gpu transition-all duration-300 group
+                   bg-gradient-to-br from-betel-gray-light to-white border-2 border-betel-red
+                   hover:-translate-y-1 hover:shadow-2xl hover:border-betel-red-dark
+                   ring-1 ring-transparent ring-offset-1 ring-offset-white hover:ring-betel-red"
+            >
+              <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-betel-red opacity-20 blur-2xl" />
               {event.type === 'special' && (
-                <div className="inline-block bg-betel-red text-white px-3 py-1 rounded-full text-sm font-semibold mb-4">
+                <div className="inline-block bg-betel-red text-white px-3 py-1 rounded-full text-sm font-semibold mb-3">
                   Especial
                 </div>
               )}
+              <div className="inline-block bg-betel-red text-white px-2 py-1 rounded-full text-xs font-semibold mb-3">
+                Jardim Palmira
+              </div>
 
               <h3 className="text-xl font-bold text-betel-gray-dark mb-3 font-playfair">
                 {event.title}
@@ -159,22 +183,23 @@ const EventsSection = () => {
               {/* Event Details */}
               <div className="space-y-2 mb-4">
                 <div className="flex items-center text-betel-gray">
-                  <Calendar className="w-4 h-4 mr-2 text-betel-red" />
+                  <Calendar className="w-4 h-4 mr-2 text-betel-red group-hover:scale-110 transition-transform" />
                   <span className="text-sm">{event.date}</span>
                 </div>
                 <div className="flex items-center text-betel-gray">
-                  <Clock className="w-4 h-4 mr-2 text-betel-red" />
+                  <Clock className="w-4 h-4 mr-2 text-betel-red group-hover:scale-110 transition-transform" />
                   <span className="text-sm">{event.time}</span>
                 </div>
                 <div className="flex items-center text-betel-gray">
-                  <MapPin className="w-4 h-4 mr-2 text-betel-red" />
+                  <MapPin className="w-4 h-4 mr-2 text-betel-red group-hover:scale-110 transition-transform" />
                   <span className="text-sm">{event.location}</span>
                 </div>
               </div>
 
-              <Button 
-                variant="outline" 
-                className="w-full border-betel-red text-betel-red hover:bg-betel-red hover:text-white transition-all duration-300 group" 
+              <Button
+                variant="outline"
+                className="w-full border-betel-red text-betel-red hover:bg-betel-red hover:text-white transition-all duration-300
+                     group hover:shadow-md rounded-xl"
                 onClick={() => setSelectedEvent(event)}
               >
                 Saiba Mais
@@ -196,58 +221,97 @@ const EventsSection = () => {
     </div>
 
     {/* Event Details Modal */}
-    <Dialog open={!!selectedEvent} onOpenChange={() => setSelectedEvent(null)}>
-      <DialogContent className="max-w-2xl">
-        <DialogHeader>
+    <Dialog open={!!selectedEvent} onOpenChange={(open) => { if (!open) setSelectedEvent(null); } }>
+      <DialogContent className="max-w-2xl bg-white/95 backdrop-blur rounded-3xl border-2 border-betel-gray-light shadow-2xl p-0 overflow-hidden">
+        <DialogHeader className="p-6 border-b bg-gradient-to-r from-betel-red/10 via-betel-gold/10 to-betel-gold/10">
           <DialogTitle className="text-2xl font-bold text-betel-gray-dark font-playfair">
             {selectedEvent?.title}
           </DialogTitle>
-          <DialogDescription className="text-lg text-betel-gray">
+          <DialogDescription className="text-betel-gray">
             {selectedEvent?.description}
           </DialogDescription>
         </DialogHeader>
 
         {selectedEvent && (
-          <div className="space-y-6">
-          <div className="bg-betel-gray-light rounded-lg p-4">
-            <h4 className="font-semibold text-betel-gray-dark mb-2">Detalhes do Evento:</h4>
-            <div className="space-y-2 text-sm text-betel-gray">
-              <div className="flex items-center">
-                <Calendar className="w-4 h-4 mr-2 text-betel-red" />
-                <span>{selectedEvent.date}</span>
+          <div className="p-6 space-y-6">
+            {/* Chips de informações */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              <div className="flex items-start min-w-0 bg-betel-gray-light/60 rounded-xl p-3">
+                <Calendar className="w-4 h-4 text-betel-red mr-2 mt-0.5" />
+                <span className="text-sm text-betel-gray-dark whitespace-normal break-words">
+                  {selectedEvent?.date}
+                </span>
               </div>
-              <div className="flex items-center">
-                <Clock className="w-4 h-4 mr-2 text-betel-red" />
-                <span>{selectedEvent.time}</span>
+              <div className="flex items-start min-w-0 bg-betel-gray-light/60 rounded-xl p-3">
+                <Clock className="w-4 h-4 text-betel-red mr-2 mt-0.5" />
+                <span className="text-sm text-betel-gray-dark whitespace-normal break-words">
+                  {selectedEvent?.time}
+                </span>
               </div>
-              <div className="flex items-center">
-                <MapPin className="w-4 h-4 mr-2 text-betel-red" />
-                <span>{selectedEvent.location}</span>
+              <div className="flex items-start min-w-0 bg-betel-gray-light/60 rounded-xl p-3 sm:col-span-2 md:col-span-3">
+                <MapPin className="w-4 h-4 text-betel-red mr-2 mt-0.5" />
+                <span className="text-sm text-betel-gray-dark whitespace-normal break-words">
+                  {selectedEvent?.location}
+                </span>
               </div>
             </div>
-          </div>
 
-          <div>
-            <h4 className="font-semibold text-betel-gray-dark mb-2">Descrição Completa:</h4>
-            <p className="text-betel-gray leading-relaxed">{selectedEvent.fullDescription}</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-4">
+            {/* Descrição */}
             <div>
-              <h4 className="font-semibold text-betel-gray-dark mb-1">Ministração:</h4>
-              <p className="text-betel-gray text-sm">{selectedEvent.pastor}</p>
+              <h4 className="font-semibold text-betel-gray-dark mb-2">Descrição Completa:</h4>
+              <p className="text-betel-gray leading-relaxed">{selectedEvent?.fullDescription}</p>
             </div>
-            <div>
-              <h4 className="font-semibold text-betel-gray-dark mb-1">Traje:</h4>
-              <p className="text-betel-gray text-sm">{selectedEvent.dresscode}</p>
+
+            {/* Ministração / Traje */}
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div>
+                <h4 className="font-semibold text-betel-gray-dark mb-1">Ministração:</h4>
+                <p className="text-betel-gray text-sm">{selectedEvent?.pastor}</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-betel-gray-dark mb-1">Traje:</h4>
+                <p className="text-betel-gray text-sm">{selectedEvent?.dresscode}</p>
+              </div>
+            </div>
+
+            {/* Ações */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button
+                size="lg"
+                className="w-full sm:w-auto bg-betel-red hover:bg-betel-red-dark text-white px-6 py-3 rounded-full font-semibold hover-lift focus-visible:ring-2 focus-visible:ring-betel-red/40"
+                onClick={() => openMapsFromLocation(selectedEvent?.location || '')}
+              >
+                <Navigation className="w-4 h-4 mr-2" /> Como Chegar
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full sm:w-auto rounded-full border-betel-red text-betel-red hover:bg-betel-red hover:text-white focus-visible:ring-2 focus-visible:ring-betel-red/30"
+                onClick={() => selectedEvent && handleShareEvent(selectedEvent)}
+              >
+                <Share className="w-4 h-4 mr-2" /> Compartilhar
+              </Button>
             </div>
           </div>
-
-
-        </div>
         )}
       </DialogContent>
     </Dialog>
   </section>;
 };
 export default EventsSection;
+
+const openMapsFromLocation = (loc: string) => {
+  const encoded = encodeURIComponent(loc);
+  window.open(`https://www.google.com/maps/search/?api=1&query=${encoded}`, '_blank');
+};
+
+const handleShareEvent = (ev: any) => {
+  const text = `${ev.title} — ${ev.date} às ${ev.time}\n${ev.location}\n${ev.description}`;
+  if (navigator.share) {
+    navigator.share({ title: ev.title, text, url: window.location.href }).catch(() => {});
+  } else if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(text).then(() => alert('Detalhes do evento copiados!'));
+  } else {
+    alert(text);
+  }
+};

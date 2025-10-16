@@ -48,13 +48,14 @@ const DonationSection = () => {
           {/* Section Header */}
           <div className="text-center mb-16 animate-on-scroll">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-betel rounded-full flex items-center justify-center bg-orange-500">
+              <div className="w-16 h-16 gradient-betel rounded-full flex items-center justify-center ring-2 ring-white/70">
                 <Heart className="w-8 h-8 text-white" />
               </div>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-betel-gray-dark mb-6 font-playfair">
               Faça Parte da <span className="text-gradient">Obra</span>
             </h2>
+            <div className="mx-auto w-24 h-1 bg-gradient-to-r from-betel-red via-betel-gold to-betel-gold rounded-full" />
             <p className="text-xl text-betel-gray max-w-3xl mx-auto leading-relaxed">
               Sua contribuição nos ajuda a levar o Evangelho a mais pessoas e
               expandir o Reino de Deus. Seja um parceiro desta missão!
@@ -69,7 +70,7 @@ const DonationSection = () => {
             
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="bg-betel-gray-light rounded-2xl p-8 text-center hover-lift animate-on-scroll">
-                <div className="w-16 h-16 bg-gradient-betel rounded-full flex items-center justify-center mx-auto mb-4 bg-orange-500">
+                <div className="w-16 h-16 gradient-betel rounded-full flex items-center justify-center mx-auto mb-4 ring-2 ring-white/70">
                   <Smartphone className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="text-xl font-bold text-betel-gray-dark mb-3 font-playfair">
@@ -91,7 +92,7 @@ const DonationSection = () => {
               </div>
 
               <div className="bg-betel-gray-light rounded-2xl p-8 text-center hover-lift animate-on-scroll">
-                <div className="w-16 h-16 bg-gradient-betel rounded-full flex items-center justify-center mx-auto mb-4 bg-orange-500">
+                <div className="w-16 h-16 gradient-betel rounded-full flex items-center justify-center mx-auto mb-4 ring-2 ring-white/70">
                   <CreditCard className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="text-xl font-bold text-betel-gray-dark mb-3 font-playfair">
@@ -123,7 +124,7 @@ const DonationSection = () => {
             
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="bg-betel-gray-light rounded-2xl p-8 text-center hover-lift animate-on-scroll">
-                <div className="w-16 h-16 bg-gradient-betel rounded-full flex items-center justify-center mx-auto mb-4 bg-orange-500">
+                <div className="w-16 h-16 gradient-betel rounded-full flex items-center justify-center mx-auto mb-4 ring-2 ring-white/70">
                   <Smartphone className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="text-xl font-bold text-betel-gray-dark mb-3 font-playfair">
@@ -145,7 +146,7 @@ const DonationSection = () => {
               </div>
 
               <div className="bg-betel-gray-light rounded-2xl p-8 text-center hover-lift animate-on-scroll">
-                <div className="w-16 h-16 bg-gradient-betel rounded-full flex items-center justify-center mx-auto mb-4 bg-orange-500">
+                <div className="w-16 h-16 gradient-betel rounded-full flex items-center justify-center mx-auto mb-4 ring-2 ring-white/70">
                   <CreditCard className="w-8 h-8 text-white" />
                 </div>
                 <h4 className="text-xl font-bold text-betel-gray-dark mb-3 font-playfair">

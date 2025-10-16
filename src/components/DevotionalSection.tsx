@@ -105,22 +105,20 @@ const DevotionalSection = () => {
     }
   ];
 
-  // Função para calcular qual devocional mostrar baseado na semana atual
+  // Função para calcular qual devocional mostrar baseado na semana atual (robusta e com fallback)
   const getCurrentWeeklyDevotional = useMemo(() => {
     const now = new Date();
-    // Data de referência (1º de janeiro de 2024)
-    const referenceDate = new Date('2024-01-01');
-    
-    // Calcular diferença em milissegundos
-    const timeDifference = now.getTime() - referenceDate.getTime();
-    
-    // Converter para semanas (7 dias = 7 * 24 * 60 * 60 * 1000 ms)
-    const weeksDifference = Math.floor(timeDifference / (7 * 24 * 60 * 60 * 1000));
-    
-    // Usar módulo para ciclar através dos devocionais
-    const devotionalIndex = weeksDifference % devotionals.length;
-    
-    return devotionals[devotionalIndex];
+    // Usar Date seguro (evita parsing inconsistente de string)
+    const referenceDate = new Date(2024, 0, 1);
+    const len = devotionals.length;
+    if (!len) return null;
+
+    const msPerWeek = 7 * 24 * 60 * 60 * 1000;
+    const weeksDifference = Math.floor((now.getTime() - referenceDate.getTime()) / msPerWeek);
+    // índice seguro para qualquer sinal
+    const index = ((weeksDifference % len) + len) % len;
+
+    return devotionals[index] || null;
   }, [devotionals]);
 
   return (
@@ -137,39 +135,50 @@ const DevotionalSection = () => {
           {/* Section Header */}
           <div className="mb-12 animate-on-scroll">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
-                <BookOpen className="w-8 h-8 text-betel-red" />
+              <div className="w-16 h-16 gradient-betel rounded-full flex items-center justify-center shadow-lg ring-2 ring-white/60">
+                <BookOpen className="w-8 h-8 text-white" />
               </div>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-betel-gray-dark mb-6 font-playfair">
-              Palavra da <span className="text-betel-red">Semana</span>
+              Palavra da <span className="text-gradient">Semana</span>
             </h2>
           </div>
 
           {/* Devotional Card */}
-          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 mb-8 animate-on-scroll hover-lift">
-            {/* Verse */}
-            <div className="mb-8">
-              <div className="text-6xl text-betel-gold mb-4">"</div>
-              <blockquote className="text-2xl md:text-3xl font-medium text-betel-gray-dark leading-relaxed font-playfair mb-6">
-                {getCurrentWeeklyDevotional.verse}
-              </blockquote>
-              <cite className="text-lg text-betel-red font-semibold">
-                — {getCurrentWeeklyDevotional.reference}
-              </cite>
-            </div>
+          {getCurrentWeeklyDevotional ? (
+            <div className="relative bg-white/95 backdrop-blur rounded-3xl border-2 border-betel-gray-light shadow-2xl p-8 md:p-12 mb-8 animate-on-scroll hover-lift transform-gpu transition-all hover:scale-[1.01] ring-1 ring-transparent ring-offset-1 ring-offset-white hover:ring-betel-red">
+              {/* Decorações sutis */}
+              <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full bg-betel-gold/20 blur-3xl" />
+              <div className="absolute -bottom-16 -left-16 w-64 h-64 rounded-full bg-betel-red/10 blur-3xl" />
 
-            {/* Reflection */}
-            <div className="border-t border-betel-gray-light pt-8">
-              <h3 className="text-xl font-bold text-betel-gray-dark mb-4 font-playfair flex items-center justify-center">
-                <Heart className="w-5 h-5 text-betel-red mr-2" />
-                Reflexão
-              </h3>
-              <p className="text-lg text-betel-gray leading-relaxed max-w-3xl mx-auto">
-                {getCurrentWeeklyDevotional.reflection}
-              </p>
+              {/* Verse */}
+              <div className="mb-8">
+                <div className="text-6xl text-betel-gold mb-4">"</div>
+                <blockquote className="text-2xl md:text-3xl font-medium text-betel-gray-dark leading-relaxed font-playfair mb-6">
+                  {getCurrentWeeklyDevotional.verse}
+                </blockquote>
+                <cite className="text-lg font-semibold text-betel-red">
+                  — {getCurrentWeeklyDevotional.reference}
+                </cite>
+              </div>
+
+              {/* Reflection */}
+              <div className="border-t border-betel-gray-light pt-8">
+                <h3 className="text-xl font-bold text-betel-gray-dark mb-4 font-playfair flex items-center justify-center">
+                  <Heart className="w-5 h-5 text-betel-red mr-2" />
+                  Reflexão
+                </h3>
+                <p className="text-lg text-betel-gray leading-relaxed max-w-3xl mx-auto">
+                  {getCurrentWeeklyDevotional.reflection}
+                </p>
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="bg-white rounded-3xl shadow-lg p-8 text-center mb-8">
+              <h3 className="text-xl font-bold text-betel-gray-dark mb-2 font-playfair">Em breve</h3>
+              <p className="text-betel-gray">Não foi possível carregar a Palavra da Semana.</p>
+            </div>
+          )}
 
           {/* CTA Button */}
           <div className="animate-on-scroll">

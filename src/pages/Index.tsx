@@ -10,6 +10,7 @@ import LocationSection from '@/components/LocationSection';
 import DonationSection from '@/components/DonationSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+import InstagramSection from '@/components/InstagramSection';
 import useScrollAnimation from '@/hooks/useScrollAnimation';
 
 const Index = () => {
@@ -30,6 +31,8 @@ const Index = () => {
       <main>
         <HeroSection />
         <AboutSection />
+        {/* Mini seção Instagram */}
+        <InstagramSection />
         <EventsSection />
         <DevotionalSection />
         <VideosSection />

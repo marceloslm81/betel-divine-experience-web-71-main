@@ -1,76 +1,64 @@
-import React, { useState } from 'react';
-import { Calendar, Clock, MapPin, Filter, Search, ArrowLeft } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Calendar, Clock, MapPin, Filter, Search, ArrowLeft, Navigation, Share } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Link } from 'react-router-dom';
 
 const EventsPage = () => {
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
-  const [filterType, setFilterType] = useState('all');
+  const [filterType, setFilterType] = useState<'all' | 'regular' | 'special'>('all');
   const [searchTerm, setSearchTerm] = useState('');
 
   const allEvents = [
+    // Vila Progresso — iguais ao EventsSection
     {
-      title: "Campanha de Quarta-Feira",
-      date: "20/08 à 10/09",
+      title: "Culto",
+      date: "Todas as Quartas-Feiras",
       time: "19:30",
-      location: "M. Encontro Betel Vila Progresso",
-      description: "Neemias 6:3B.",
+      location: "Encontro Betel - Vila Progresso",
+      description: "Venha adorar e receber uma palavra de Deus que transformará sua vida.",
       type: "regular",
-      fullDescription: "Estou fazendo uma grande obra e não posso parar.",
-      pastor: "Pastor Edvaldo, Pres. Celso",
-      dresscode: "Traje social ou casual elegante",
-      parking: "Estacionamento gratuito - chegue cedo"
+      fullDescription: "Nosso culto é um momento especial de adoração, louvor e ministração da Palavra de Deus. Venha com sua família e experimente a presença do Senhor conosco. Temos ministração para todas as idades.",
+      pastor: "Presbítero Celso",
+      dresscode: "Traje casual ou social"
     },
     {
-      title: "Círculo de Oração e Intercessão",
-      date: "Todas as Terças-Feiras",
-      time: "16:00",
-      location: "M. Encontro Betel Vila Progresso",
-      description: "Momento de oração, intercessão e busca pela presença de Deus.",
+      title: "Culto",
+      date: "Todas as Sextas-Feiras",
+      time: "19:30",
+      location: "Encontro Betel - Vila Progresso",
+      description: "Um momento especial de adoração, louvor e palavra de Deus.",
       type: "regular",
-      fullDescription: "O Círculo de Oração é um momento especial dedicado à intercessão, onde nos reunimos para buscar a face de Deus, orar pelas necessidades da igreja, famílias e nação. É um tempo de comunhão íntima com o Senhor, onde experimentamos Sua presença de forma poderosa através da oração coletiva e individual.",
-      pastor: "Miss. Cláudia",
-      dresscode: "Traje casual e confortável",
-      parking: "Estacionamento gratuito disponível"
+      fullDescription: "Todos os domingos nos reunimos para um poderoso momento de adoração. É uma oportunidade de louvar e adorar o Senhor. Venha participar deste momento de intimidade com Deus.",
+      pastor: "Presbítero Celso",
+      dresscode: "Traje social ou casual"
     },
     {
-      title: "Culto de Consagração",
+      title: "Culto da Família",
       date: "Todos os Domingos",
-      time: "09:00",
-      location: "M. Encontro Betel Vila Progresso",
-      description: "Culto matinal de consagração e adoração ao Senhor.",
+      time: "18:00",
+      location: "Encontro Betel - Vila Progresso",
+      description: "Louvor e Palavra de Deus para toda a família.",
       type: "regular",
-      fullDescription: "O Culto de Consagração é nosso primeiro encontro dominical, um momento especial de adoração e entrega total ao Senhor. Começamos o dia e a semana consagrando nossas vidas, famílias e projetos nas mãos de Deus. É um culto de profunda comunhão, louvor e ministração da Palavra, onde experimentamos a renovação espiritual para enfrentar os desafios da semana.",
-      pastor: "Miss. Maristela",
-      dresscode: "Traje social ou casual elegante",
-      parking: "Estacionamento amplo e gratuito disponível"
+      fullDescription: "Nossa igreja é um lugar de louvor e adoração. Venha participar deste momento de intimidade com Deus.",
+      pastor: "Presbítero Celso",
+      dresscode: "Traje casual"
     },
-    {
-      title: "Campanha de Sexta-Feira",
-      date: "22/08 à 10/10",
-      time: "19:30",
-      location: "M. Encontro Betel Vila Progresso",
-      description: "Em busca do meu milagre.",
-      type: "regular",
-      fullDescription: "Em busca do meu milagre.",
-      pastor: "Pastor Edvaldo, Pres. Celso",
-      dresscode: "Traje confortável",
-      parking: "Estacionamento seguro disponível"
-    },
+
+    // Mantido — Ceia do Senhor (Vila Progresso)
     {
       title: "Ceia do Senhor",
       date: "Todo Segundo Sábado",
       time: "19:30",
-      location: "M. Encontro Betel Vila Progresso",
+      location: "Encontro Betel - Vila Progresso",
       description: "Ministração especial ( Ceia ).",
       type: "special",
       fullDescription: "Na Ceia do Senhor, recordamos o sacrifício que nos trouxe vida, partilhamos do pão e do cálice em comunhão, renovando nossa fé e esperança em Cristo.",
       pastor: "Pastor Edvaldo",
-      dresscode: "Traje social",
-      parking: "Estacionamento gratuito disponível"
+      dresscode: "Traje social"
     },
-    // Novos eventos adicionados
+
+    // Sede Jardim Palmira — mantidos
     {
       title: "Culto de Adoração",
       date: "Todas as Terças-Feiras",
@@ -149,6 +137,11 @@ const EventsPage = () => {
     return location.includes('Vila Progresso');
   };
 
+  // Ao montar, garantir topo
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   return (
     <div className="min-h-screen bg-betel-gray-light">
       {/* Header */}
@@ -178,7 +171,7 @@ const EventsPage = () => {
               <Filter className="w-5 h-5 text-betel-red" />
               <select 
                 value={filterType} 
-                onChange={(e) => setFilterType(e.target.value)} 
+                onChange={(e) => setFilterType(e.target.value as 'all' | 'regular' | 'special')} 
                 className="border border-betel-gray-light rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-betel-red"
               >
                 <option value="all">Todos os Eventos</option>
@@ -204,24 +197,26 @@ const EventsPage = () => {
           {filteredEvents.map((event, index) => {
             const isSede = isSedeEvent(event.location);
             const isVilaProgresso = isVilaProgressoEvent(event.location);
-            
             return (
               <div 
                 key={index} 
-                className={`rounded-2xl shadow-lg p-6 hover-lift group border transition-all duration-300 ${
+                className={`relative overflow-hidden rounded-2xl p-6 transform-gpu transition-all duration-300 group border-2 ${
                   isSede 
-                    ? 'bg-gradient-to-br from-emerald-50 to-cyan-50 border-emerald-200 hover:shadow-emerald-200/50' 
+                    ? 'bg-gradient-to-br from-betel-gray-light to-white border-betel-red hover:border-betel-red-dark ring-1 ring-transparent ring-offset-1 ring-offset-white hover:ring-betel-red' 
                     : isVilaProgresso
-                    ? 'bg-gradient-to-br from-blue-50 to-indigo-50 border-blue-200 hover:shadow-blue-200/50'
+                    ? 'bg-gradient-to-br from-betel-gold-light to-white border-betel-gold hover:border-betel-yellow ring-1 ring-transparent ring-offset-1 ring-offset-white hover:ring-betel-gold'
                     : 'bg-white border-betel-gray-light hover:shadow-xl'
                 }`}
               >
+                <div className={`absolute -top-10 -right-10 w-40 h-40 rounded-full ${
+                  isSede ? 'bg-betel-red' : isVilaProgresso ? 'bg-betel-gold-light' : 'bg-betel-gray-light'
+                } opacity-20 blur-2xl`} />
                 {event.type === 'special' && (
                   <div className={`inline-block text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 ${
                     isSede 
-                      ? 'bg-gradient-to-r from-emerald-600 to-cyan-600' 
+                      ? 'bg-betel-red' 
                       : isVilaProgresso
-                      ? 'bg-gradient-to-r from-blue-600 to-indigo-600'
+                      ? 'bg-gradient-to-r from-betel-gold to-betel-yellow'
                       : 'bg-betel-red'
                   }`}>
                     Especial
@@ -229,13 +224,12 @@ const EventsPage = () => {
                 )}
 
                 {isSede && (
-                  <div className="inline-block bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-3 py-1 rounded-full text-xs font-semibold mb-3 ml-2">
+                  <div className="inline-block bg-betel-red text-white px-3 py-1 rounded-full text-xs font-semibold mb-3 ml-2">
                     Sede Jardim Palmira
                   </div>
                 )}
-
                 {isVilaProgresso && (
-                  <div className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-1 rounded-full text-xs font-semibold mb-3 ml-2">
+                  <div className="inline-block bg-gradient-to-r from-betel-gold to-betel-yellow text-white px-3 py-1 rounded-full text-xs font-semibold mb-3 ml-2">
                     Vila Progresso
                   </div>
                 )}
@@ -249,27 +243,15 @@ const EventsPage = () => {
 
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center text-betel-gray">
-                    <Calendar className={`w-4 h-4 mr-2 ${
-                      isSede ? 'text-emerald-600' 
-                      : isVilaProgresso ? 'text-blue-600' 
-                      : 'text-betel-red'
-                    }`} />
+                    <Calendar className={`w-4 h-4 mr-2 ${isSede ? 'text-betel-red' : isVilaProgresso ? 'text-betel-gold' : 'text-betel-red'}`} />
                     <span className="text-sm">{event.date}</span>
                   </div>
                   <div className="flex items-center text-betel-gray">
-                    <Clock className={`w-4 h-4 mr-2 ${
-                      isSede ? 'text-emerald-600' 
-                      : isVilaProgresso ? 'text-blue-600' 
-                      : 'text-betel-red'
-                    }`} />
+                    <Clock className={`w-4 h-4 mr-2 ${isSede ? 'text-betel-red' : isVilaProgresso ? 'text-betel-gold' : 'text-betel-red'}`} />
                     <span className="text-sm">{event.time}</span>
                   </div>
                   <div className="flex items-center text-betel-gray">
-                    <MapPin className={`w-4 h-4 mr-2 ${
-                      isSede ? 'text-emerald-600' 
-                      : isVilaProgresso ? 'text-blue-600' 
-                      : 'text-betel-red'
-                    }`} />
+                    <MapPin className={`w-4 h-4 mr-2 ${isSede ? 'text-betel-red' : isVilaProgresso ? 'text-betel-gold' : 'text-betel-red'}`} />
                     <span className="text-sm">{event.location}</span>
                   </div>
                 </div>
@@ -278,9 +260,9 @@ const EventsPage = () => {
                   variant="outline" 
                   className={`w-full transition-all duration-300 ${
                     isSede 
-                      ? 'border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white' 
+                      ? 'border-betel-red text-betel-red hover:bg-betel-red hover:text-white' 
                       : isVilaProgresso
-                      ? 'border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'
+                      ? 'border-betel-gold text-betel-gold hover:bg-betel-gold hover:text-white'
                       : 'border-betel-red text-betel-red hover:bg-betel-red hover:text-white'
                   }`}
                   onClick={() => setSelectedEvent(event)}
@@ -300,63 +282,76 @@ const EventsPage = () => {
       </div>
 
       {/* Event Details Modal */}
-      <Dialog open={!!selectedEvent} onOpenChange={() => setSelectedEvent(null)}>
-        <DialogContent className="max-w-2xl">
-          <DialogHeader>
+      <Dialog open={!!selectedEvent} onOpenChange={(open) => { if (!open) setSelectedEvent(null); } }>
+        <DialogContent className="max-w-2xl bg-white/95 backdrop-blur rounded-3xl border-2 border-betel-gray-light shadow-2xl p-0 overflow-hidden">
+          <DialogHeader className="p-6 border-b bg-gradient-to-r from-betel-red/10 via-betel-gold/10 to-betel-gold/10">
             <DialogTitle className="text-2xl font-bold text-betel-gray-dark font-playfair">
               {selectedEvent?.title}
             </DialogTitle>
-            <DialogDescription className="text-lg text-betel-gray">
+            <DialogDescription className="text-betel-gray">
               {selectedEvent?.description}
             </DialogDescription>
           </DialogHeader>
-          
+
           {selectedEvent && (
-            <div className="space-y-6">
-              <div className="bg-betel-gray-light rounded-lg p-4">
-                <h4 className="font-semibold text-betel-gray-dark mb-2">Detalhes do Evento:</h4>
-                <div className="space-y-2 text-sm text-betel-gray">
-                  <div className="flex items-center">
-                    <Calendar className={`w-4 h-4 mr-2 ${
-                      isSedeEvent(selectedEvent.location) ? 'text-emerald-600' 
-                      : isVilaProgressoEvent(selectedEvent.location) ? 'text-blue-600'
-                      : 'text-betel-red'
-                    }`} />
-                    <span>{selectedEvent.date}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Clock className={`w-4 h-4 mr-2 ${
-                      isSedeEvent(selectedEvent.location) ? 'text-emerald-600' 
-                      : isVilaProgressoEvent(selectedEvent.location) ? 'text-blue-600'
-                      : 'text-betel-red'
-                    }`} />
-                    <span>{selectedEvent.time}</span>
-                  </div>
-                  <div className="flex items-center">
-                    <MapPin className={`w-4 h-4 mr-2 ${
-                      isSedeEvent(selectedEvent.location) ? 'text-emerald-600' 
-                      : isVilaProgressoEvent(selectedEvent.location) ? 'text-blue-600'
-                      : 'text-betel-red'
-                    }`} />
-                    <span>{selectedEvent.location}</span>
-                  </div>
+            <div className="p-6 space-y-6">
+              {/* Chips de informações */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="flex items-start min-w-0 bg-betel-gray-light/60 rounded-xl p-3">
+                  <Calendar className="w-4 h-4 text-betel-red mr-2 mt-0.5" />
+                  <span className="text-sm text-betel-gray-dark whitespace-normal break-words">
+                    {selectedEvent?.date}
+                  </span>
+                </div>
+                <div className="flex items-start min-w-0 bg-betel-gray-light/60 rounded-xl p-3">
+                  <Clock className="w-4 h-4 text-betel-red mr-2 mt-0.5" />
+                  <span className="text-sm text-betel-gray-dark whitespace-normal break-words">
+                    {selectedEvent?.time}
+                  </span>
+                </div>
+                <div className="flex items-start min-w-0 bg-betel-gray-light/60 rounded-xl p-3 sm:col-span-2 md:col-span-3">
+                  <MapPin className="w-4 h-4 text-betel-red mr-2 mt-0.5" />
+                  <span className="text-sm text-betel-gray-dark whitespace-normal break-words">
+                    {selectedEvent?.location}
+                  </span>
                 </div>
               </div>
 
+              {/* Descrição */}
               <div>
                 <h4 className="font-semibold text-betel-gray-dark mb-2">Descrição Completa:</h4>
-                <p className="text-betel-gray leading-relaxed">{selectedEvent.fullDescription}</p>
+                <p className="text-betel-gray leading-relaxed">{selectedEvent?.fullDescription}</p>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-4">
+              {/* Extra */}
+              <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <h4 className="font-semibold text-betel-gray-dark mb-1">Ministração:</h4>
-                  <p className="text-betel-gray text-sm">{selectedEvent.pastor}</p>
+                  <p className="text-betel-gray text-sm">{selectedEvent?.pastor}</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-betel-gray-dark mb-1">Traje:</h4>
-                  <p className="text-betel-gray text-sm">{selectedEvent.dresscode}</p>
+                  <p className="text-betel-gray text-sm">{selectedEvent?.dresscode}</p>
                 </div>
+              </div>
+
+              {/* Ações */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto bg-betel-red hover:bg-betel-red-dark text-white px-6 py-3 rounded-full font-semibold hover-lift focus-visible:ring-2 focus-visible:ring-betel-red/40"
+                  onClick={() => openMapsFromLocation(selectedEvent?.location || '')}
+                >
+                  <Navigation className="w-4 h-4 mr-2" /> Como Chegar
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="w-full sm:w-auto rounded-full border-betel-red text-betel-red hover:bg-betel-red hover:text-white focus-visible:ring-2 focus-visible:ring-betel-red/30"
+                  onClick={() => selectedEvent && handleShareEvent(selectedEvent)}
+                >
+                  <Share className="w-4 h-4 mr-2" /> Compartilhar
+                </Button>
               </div>
             </div>
           )}
@@ -367,3 +362,20 @@ const EventsPage = () => {
 };
 
 export default EventsPage;
+
+
+const openMapsFromLocation = (loc: string) => {
+  const encoded = encodeURIComponent(loc);
+  window.open(`https://www.google.com/maps/search/?api=1&query=${encoded}`, '_blank');
+};
+
+const handleShareEvent = (ev: any) => {
+  const text = `${ev.title} — ${ev.date} às ${ev.time}\n${ev.location}\n${ev.description}`;
+  if (navigator.share) {
+    navigator.share({ title: ev.title, text, url: window.location.href }).catch(() => {});
+  } else if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(text).then(() => alert('Detalhes do evento copiados!'));
+  } else {
+    alert(text);
+  }
+};
