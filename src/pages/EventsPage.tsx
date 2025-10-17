@@ -12,7 +12,7 @@ const EventsPage = () => {
   const allEvents = [
     // Vila Progresso — iguais ao EventsSection
     {
-      title: "Culto",
+      title: "Culto de Campanha",
       date: "Todas as Quartas-Feiras",
       time: "19:30",
       location: "Encontro Betel - Vila Progresso",
@@ -23,7 +23,7 @@ const EventsPage = () => {
       dresscode: "Traje casual ou social"
     },
     {
-      title: "Culto",
+      title: "Culto de Campanha",
       date: "Todas as Sextas-Feiras",
       time: "19:30",
       location: "Encontro Betel - Vila Progresso",
@@ -44,6 +44,17 @@ const EventsPage = () => {
       pastor: "Presbítero Celso",
       dresscode: "Traje casual"
     },
+     {
+      title: "Consagração",
+      date: "Todos os Domingos",
+      time: "09h00",
+      location: "Encontro Betel - Vila Progresso",
+      description: "Momento de consagração, oração e preparação espiritual.",
+      type: "regular",
+      fullDescription: "Encontro dominical dedicado à consagração, oração e busca da presença de Deus. Um tempo especial para fortalecer a vida espiritual e se preparar para o dia do Senhor em unidade com a igreja.",
+      pastor: "Presbítero Celso, Miss. Maristela",
+      dresscode: "Traje casual"
+    },
 
     // Mantido — Ceia do Senhor (Vila Progresso)
     {
@@ -60,7 +71,7 @@ const EventsPage = () => {
 
     // Sede Jardim Palmira — mantidos
     {
-      title: "Culto de Adoração",
+      title: "Culto de Campanha",
       date: "Todas as Terças-Feiras",
       time: "19:00",
       location: "M. Encontro Betel Sede Jardim Palmira",
@@ -84,7 +95,7 @@ const EventsPage = () => {
       parking: "Estacionamento gratuito disponível"
     },
     {
-      title: "Culto de Adoração",
+      title: "Culto de Departamento",
       date: "Todos os Sábados",
       time: "19:00",
       location: "M. Encontro Betel Sede Jardim Palmira",

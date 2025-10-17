@@ -41,9 +41,9 @@ const Footer = () => {
             <div className="lg:col-span-2">
               <div className="mb-6">
                 <img
-                  src="/lovable-uploads/betel.jpg"
+                  src="/lovable-uploads/LogoRodape.png"
                   alt="Ministério Encontro Betel"
-                  className="h-16 w-auto"
+                  className="h-20 md:h-36 w-auto"
                 />
               </div>
               <p className="text-gray-300 leading-relaxed mb-6 max-w-md">

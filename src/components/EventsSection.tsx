@@ -7,7 +7,7 @@ const EventsSection = () => {
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
   
   const eventsVilaProgresso = [{
-    title: "Culto",
+    title: "Culto de Campanha",
     date: "Todas as Quartas-Feiras",
     time: "19:30",
     location: "Encontro Betel - Vila Progresso",
@@ -18,7 +18,7 @@ const EventsSection = () => {
     dresscode: "Traje casual ou social",
 
   }, {
-    title: "Culto",
+    title: "Culto de Campanha",
     date: "Todas as Sextas-Feiras",
     time: "19:30",
     location: "Encontro Betel - Vila Progresso",
@@ -41,7 +41,7 @@ const EventsSection = () => {
   }];
 
   const eventsVilaPalmira = [{
-    title: "Culto de Adoração",
+    title: "Culto de Campanha",
     date: "Todas as Terças-Feiras",
     time: "19:00",
     location: "Encontro Betel - Vila Palmira",
@@ -51,7 +51,7 @@ const EventsSection = () => {
     pastor: "Pastor Edvaldo",
     dresscode: "Traje casual",
   }, {
-      title: "Culto de Adoração",
+      title: "Culto de Departamento",
       date: "Todos os Sábados",
       time: "19:00",
       location: "M. Encontro Betel Sede Jardim Palmira",

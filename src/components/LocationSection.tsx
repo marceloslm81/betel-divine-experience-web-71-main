@@ -17,7 +17,7 @@ const LocationSection = () => {
   };
 
   const handlePhoneClick = () => {
-    window.open('tel:+5511999999999', '_self');
+    window.open('tel:+5511989073079', '_self');
   };
 
   const handleEmailClick = () => {
@@ -85,10 +85,10 @@ const LocationSection = () => {
                           Horários dos Cultos
                         </h5>
                         <div className="text-betel-gray space-y-1">
-                          <p>Terça: 19h00 (Culto de Adoração)</p>
-                          <p>Sabado: 19h00 (Culto de Adoração)</p>
+                          <p>Terça: 19h00 (Culto de Campanha)</p>
+                          <p>Sabado: 19h00 (Culto de Departamento)</p>
                           <p>Domingo: 18h00 (Culto da Família)</p>
-                          <p>Quarta: 15h00 (Culto Círculo de Oração )</p>
+                          <p>Quarta: 15h00 (Culto Círculo de Oração)</p>
                         </div>
                       </div>
                     </div>
@@ -201,8 +201,8 @@ const LocationSection = () => {
                           Horários dos Cultos
                         </h5>
                         <div className="text-betel-gray space-y-1">
-                          <p>Quarta: 19h30 (Culto)</p>
-                          <p>Sexta: 19h30 (Culto)</p>
+                          <p>Quarta: 19h30 (Culto de Campanha)</p>
+                          <p>Sexta: 19h30 (Culto de Campanha)</p>
                           <p>Domingo: 18h00 (Culto da Família)</p>
                           <p>Domingo: 09h00 (Consagração)</p>                         
                         </div>
