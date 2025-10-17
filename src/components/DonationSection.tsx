@@ -66,21 +66,27 @@ const DonationSection = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-betel-gray-dark mb-6 font-playfair">
                 Faça Parte da <span className="text-gradient">Obra</span>
               </h2>
-              <div className="mx-auto w-24 h-1 bg-gradient-to-r from-betel-red via-betel-gold to-betel-gold rounded-full" />
-              <p className="text-xl text-betel-gray max-w-3xl mx-auto leading-relaxed">
+              <div className="mx-auto w-24 h-1 bg-gradient-to-r from-betel-red via-betel-gold to-betel-gold rounded-full mb-6" />
+              <p className="text-xl text-betel-gray max-w-3xl mx-auto leading-relaxed mb-8">
                 Sua contribuição nos ajuda a levar o Evangelho a mais pessoas e
                 expandir o Reino de Deus. Seja um parceiro desta missão!
               </p>
-            </div>
-
-            {/* Banner Dízimo */}
-            <div className="relative rounded-3xl overflow-hidden mb-16 shadow-2xl border-2 border-betel-gray-light animate-on-scroll h-64 md:h-[24rem]">
-              <img
-                src="/lovable-uploads/Dizimo.jpg"
-                alt="Dízimo — Faça parte da obra"
-                className="absolute inset-0 w-full h-full object-cover"
-                loading="eager"
-              />
+              
+              {/* Banner Dízimo - Versão menor e mais estilizada */}
+              <div className="max-w-xl mx-auto rounded-3xl overflow-hidden shadow-xl border-2 border-betel-gray-light/20 animate-on-scroll hover:scale-[1.02] transition-all duration-300 group">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent group-hover:from-black/40 transition-all duration-300" />
+                  <img
+                    src="/lovable-uploads/Dizimo.jpg"
+                    alt="Dízimo — Faça parte da obra"
+                    className="w-full h-auto"
+                    loading="eager"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 text-white text-center opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                    <p className="text-sm font-medium">Seja fiel nos dízimos e ofertas</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Betel Vila Progresso */}
