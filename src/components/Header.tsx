@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
@@ -8,6 +8,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>('hero');
 
+  // Apenas altera o fundo do header quando rola; não mexe no activeSection
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -17,32 +18,7 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Observa seções para marcar o link ativo
-  useEffect(() => {
-    const ids = ['hero', 'about', 'events', 'devotional', 'videos', 'location', 'contact'];
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const id = entry.target.id;
-            if (ids.includes(id)) {
-              setActiveSection(id);
-            }
-          }
-        });
-      },
-      // Deixa a detecção mais tolerante com header fixo
-      { root: null, threshold: 0.3, rootMargin: '-80px 0px -40% 0px' }
-    );
-
-    ids.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
+  // REMOVIDO: useEffect com IntersectionObserver que alterava activeSection durante o scroll
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     const headerEl = document.querySelector('header') as HTMLElement | null;
@@ -50,8 +26,7 @@ const Header = () => {
 
     if (element) {
       const top = element.getBoundingClientRect().top + window.scrollY - offset;
-      // Marca como ativo imediatamente para mostrar o sublinhado
-      setActiveSection(sectionId);
+      setActiveSection(sectionId); // só muda no clique
       window.scrollTo({ top, behavior: 'smooth' });
       setIsMenuOpen(false);
     }
