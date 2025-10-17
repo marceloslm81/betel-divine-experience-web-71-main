@@ -48,7 +48,7 @@ const Footer = () => {
                   <img
                     src="/lovable-uploads/LogoRodape.png"
                     alt="Ministério Encontro Betel"
-                    className="h-20 md:h-28 w-auto mx-auto md:mx-0 drop-shadow-md"
+                    className="h-24 md:h-44 w-auto mx-auto md:mx-0 drop-shadow-md"
                   />
                 </div>
                 <p className="text-gray-300 leading-relaxed mb-6 max-w-md text-center md:text-left mx-auto md:mx-0">
