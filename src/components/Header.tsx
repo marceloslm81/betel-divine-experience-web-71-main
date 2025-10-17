@@ -31,21 +31,28 @@ const Header = () => {
           }
         });
       },
-      { root: null, threshold: 0.5 }
+      // Deixa a detecção mais tolerante com header fixo
+      { root: null, threshold: 0.3, rootMargin: '-80px 0px -40% 0px' }
     );
-  
+
     ids.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
-  
+
     return () => observer.disconnect();
   }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
+    const headerEl = document.querySelector('header') as HTMLElement | null;
+    const offset = headerEl?.offsetHeight ?? 80;
+
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const top = element.getBoundingClientRect().top + window.scrollY - offset;
+      // Marca como ativo imediatamente para mostrar o sublinhado
+      setActiveSection(sectionId);
+      window.scrollTo({ top, behavior: 'smooth' });
       setIsMenuOpen(false);
     }
   };
