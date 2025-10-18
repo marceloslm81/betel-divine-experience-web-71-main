@@ -43,7 +43,7 @@ const EventsSection = () => {
   const eventsVilaPalmira = [{
     title: "Culto de Campanha",
     date: "Todas as Terças-Feiras",
-    time: "19:00",
+    time: "19:30",
     location: "Encontro Betel - Vila Palmira",
     description: "Momento de intimidade e adoração ao Senhor.",
     type: "regular",
@@ -65,7 +65,7 @@ const EventsSection = () => {
    {
     title: "Culto Da Família",
     date: "Todos os Domingos",
-    time: "19:00",
+    time: "18:00",
     location: "Encontro Betel - Vila Palmira",
     description: "Celebração com toda a família e ministração da Palavra.",
     type: "regular",
@@ -80,7 +80,7 @@ const EventsSection = () => {
         {/* Section Header Vila Progresso */}
           <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-betel-gray-dark mb-6 font-playfair">
-            Eventos <span className="text-gradient">Encontro Betel Vila Progresso</span>
+            Eventos <span className="text-gradient">Vila Progresso</span>
           </h2>
           <p className="text-xl text-betel-gray max-w-3xl mx-auto leading-relaxed">
             Participe dos nossos encontros e viva momentos especiais na presença de Deus
@@ -146,7 +146,7 @@ const EventsSection = () => {
         {/* Section Header Vila Palmira */}
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-betel-gray-dark mb-6 font-playfair">
-            Eventos <span className="text-gradient">Encontro Betel Sede Jardim Palmira</span>
+            Eventos <span className="text-gradient">Sede Jardim Palmira</span>
           </h2>
           <p className="text-xl text-betel-gray max-w-3xl mx-auto leading-relaxed">
             Venha participar dos nossos encontros na sede Vila Palmira

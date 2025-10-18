@@ -92,7 +92,7 @@ const DonationSection = () => {
             {/* Betel Vila Progresso */}
             <div className="mb-16">
               <h3 className="text-4xl font-bold text-betel-gray-dark mb-8 font-playfair text-center">
-                Encontro Betel <span className="text-gradient">Vila Progresso</span>
+                Ministério Encontro Betel <span className="text-gradient">Vila Progresso</span>
               </h3>
               
               <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -158,7 +158,7 @@ const DonationSection = () => {
             {/* Sede Jardim Palmira */}
             <div className="mb-16">
               <h3 className="text-4xl font-bold text-betel-gray-dark mb-8 font-playfair text-center">
-                Encontro Betel Sede <span className="text-gradient">Jardim Palmira</span>
+                Ministério Encontro Betel Sede <span className="text-gradient">Jardim Palmira</span>
               </h3>
               
               <div className="grid md:grid-cols-2 gap-8 mb-8">

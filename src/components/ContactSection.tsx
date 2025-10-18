@@ -106,6 +106,7 @@ const ContactSection = () => {
                 </h3>
 
                 <div className="space-y-4 text-left mt-2">
+                  {/* Sede - Jardim Palmira */}
                   <div className="flex items-start justify-between">
                     <div>
                       <h4 className="font-bold text-betel-gray-dark mb-1">Sede - Jardim Palmira</h4>
@@ -115,22 +116,24 @@ const ContactSection = () => {
                     <Button
                       variant="outline"
                       className="rounded-full border-betel-red text-betel-red hover:bg-betel-red hover:text-white focus-visible:ring-2 focus-visible:ring-betel-red/40"
-                      onClick={() => openMaps('R. Jaime dos Santos Augusto Filho, 52 - Jardim Palmira, Guarulhos - SP')}
+                      onClick={() => window.open('https://maps.app.goo.gl/E8AZw7KQJuTLfkW77', '_blank')}
                     >
                       <Navigation className="w-4 h-4 mr-1" /> Como Chegar
                     </Button>
                   </div>
 
+                  {/* Vila Progresso */}
                   <div className="flex items-start justify-between">
                     <div>
                       <h4 className="font-bold text-betel-gray-dark mb-1">Vila Progresso</h4>
-                      <p className="text-betel-gray text-sm">R. Cardon, 1192 - Jardim Ipanema</p>
-                      <p className="text-betel-gray text-sm">São Paulo - SP</p>
+                      <p className="text-betel-gray text-sm">R. Cardon, 1192</p>
+                      <p className="text-betel-gray text-sm">Jardim Ipanema (Zona Leste)</p>
+                      <p className="text-betel-gray text-sm">São Paulo - SP, 08041-525</p>
                     </div>
                     <Button
                       variant="outline"
                       className="rounded-full border-betel-gold text-betel-gold hover:bg-betel-gold hover:text-white focus-visible:ring-2 focus-visible:ring-betel-gold/40"
-                      onClick={() => openMaps('R. Cardon, 1192 - Jardim Ipanema, São Paulo - SP')}
+                      onClick={() => window.open('https://maps.app.goo.gl/SoFu9Pv9Xv2BMs119', '_blank')}
                     >
                       <Navigation className="w-4 h-4 mr-1" /> Como Chegar
                     </Button>

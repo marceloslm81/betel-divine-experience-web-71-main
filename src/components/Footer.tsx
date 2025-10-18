@@ -46,14 +46,14 @@ const Footer = () => {
               <div className="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-6 md:p-7 shadow-lg transition-transform hover:-translate-y-0.5">
                 <div className="mb-6 text-center md:text-left">
                   <img
-                    src="/lovable-uploads/LogoRodape.png"
+                    src="/lovable-uploads/LogoRodape.jpg"
                     alt="Ministério Encontro Betel"
-                    className="h-24 md:h-44 w-auto mx-auto md:mx-0 drop-shadow-md"
+                    className="h-24 md:h-32 w-auto mx-auto md:mx-0 drop-shadow-md"
                   />
+                  <p className="mt-2 text-white font-playfair font-semibold text-lg md:text-lg text-center md:text-left tracking-normal">
+                    MINISTÉRIO ENCONTRO BETEL
+                  </p>
                 </div>
-                <p className="text-gray-300 leading-relaxed mb-6 max-w-md text-center md:text-left mx-auto md:mx-0">
-                  Uma igreja que se importa com você.
-                </p>
 
                 {/* Redes sociais */}
                 <div className="flex justify-center md:justify-start space-x-4">
@@ -157,7 +157,7 @@ const Footer = () => {
           <div className="border-t border-white/10 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <p className="text-gray-400 text-sm text-center md:text-left">
-                © 2025 Igreja Encontro Betel. Todos os direitos reservados. Desenvolvido pela empresa {' '}
+                © 2025 Ministério Encontro Betel. Todos os direitos reservados. Desenvolvido pela empresa {' '}
                 <button
                   onClick={handleDvelloperClick}
                   className="relative inline-flex items-center px-3 py-1 bg-gradient-to-r from-betel-gold to-yellow-500 text-betel-gray-dark font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 group overflow-hidden"

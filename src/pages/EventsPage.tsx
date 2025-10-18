@@ -73,7 +73,7 @@ const EventsPage = () => {
     {
       title: "Culto de Campanha",
       date: "Todas as Terças-Feiras",
-      time: "19:00",
+      time: "19:30",
       location: "M. Encontro Betel Sede Jardim Palmira",
       description: "Momento especial de adoração e louvor ao Senhor.",
       type: "regular",

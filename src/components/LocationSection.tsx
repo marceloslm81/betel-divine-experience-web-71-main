@@ -3,7 +3,7 @@ import { MapPin, Clock, Phone, Navigation } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const LocationSection = () => {
-  const ADDRESS_SEDE = 'R. Jaime dos Santos Augusto Filho, 52 - (Sede) Jd Palmira, Guarulhos - SP';
+  const ADDRESS_SEDE = 'R. Jaime dos Santos Augusto Filho, 51 - (Sede) Jd Palmira, Guarulhos - SP';
   const ADDRESS_VILA = 'R. Cardon, 1192 - Jardim Ipanema, São Paulo - SP, 08041-525';
 
   const handleDirectionsClickVilaProgresso = () => {
@@ -12,8 +12,7 @@ const LocationSection = () => {
   };
 
   const handleDirectionsClickSede = () => {
-    const encodedAddress = encodeURIComponent(ADDRESS_SEDE);
-    window.open(`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`, '_blank');
+    window.open('https://maps.app.goo.gl/E8AZw7KQJuTLfkW77', '_blank');
   };
 
   const handlePhoneClick = () => {
@@ -43,7 +42,7 @@ const LocationSection = () => {
           {/* Sede Vila Palmira */}
           <div className="mb-16">
             <h3 className="text-4xl font-bold text-betel-gray-dark mb-8 font-playfair text-center">
-              Encontro Betel Sede - <span className="text-gradient">Jardim Palmira</span>
+              Ministério Encontro Betel Sede - <span className="text-gradient">Jardim Palmira</span>
             </h3>
             
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -159,7 +158,7 @@ const LocationSection = () => {
           {/* Vila Progresso */}
           <div>
             <h3 className="text-4xl font-bold text-betel-gray-dark mb-8 font-playfair text-center">
-              Encontro Betel - <span className="text-gradient">Vila Progresso</span>
+              Ministério Encontro Betel - <span className="text-gradient">Vila Progresso</span>
             </h3>
             
             <div className="grid lg:grid-cols-2 gap-12 items-center">
