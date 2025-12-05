@@ -38,7 +38,7 @@ function HeroSection() {
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 font-playfair">
-            Na verdade o <span className="text-gradient">Senhor está</span> neste lugar. Genesis 18:16B
+            Na verdade o <span className="text-gradient">Senhor está</span> neste lugar. Gênesis 18:16B
           </h1>
 
           {/* Subtitle */}
