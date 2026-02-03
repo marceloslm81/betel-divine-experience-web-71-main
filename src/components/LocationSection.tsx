@@ -85,9 +85,9 @@ const LocationSection = () => {
                         </h5>
                         <div className="text-betel-gray space-y-1">
                           <p>Terça: 19h00 (Culto de Campanha)</p>
+                          <p>Quarta: 15h00 (Círculo de Oração)</p>
                           <p>Sabado: 19h00 (Culto de Departamento)</p>
-                          <p>Domingo: 18h00 (Culto da Família)</p>
-                          <p>Quarta: 15h00 (Culto Círculo de Oração)</p>
+                          <p>Domingo: 18h00 (Culto da Família)</p>                         
                         </div>
                       </div>
                     </div>
@@ -201,9 +201,10 @@ const LocationSection = () => {
                         </h5>
                         <div className="text-betel-gray space-y-1">
                           <p>Quarta: 19h30 (Culto de Campanha)</p>
+                          <p>Terça: 15h00 (Círculo de Oração)</p>
                           <p>Sexta: 19h30 (Culto de Campanha)</p>
-                          <p>Domingo: 18h00 (Culto da Família)</p>
-                          <p>Domingo: 09h00 (Consagração)</p>                         
+                          <p>Domingo: 09h00 (Consagração)</p>
+                          <p>Domingo: 18h00 (Culto da Família)</p>                  
                         </div>
                       </div>
                     </div>
