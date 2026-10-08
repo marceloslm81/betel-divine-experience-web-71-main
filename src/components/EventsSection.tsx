@@ -8,7 +8,7 @@ const EventsSection = () => {
   
   const eventsVilaProgresso = [{
     title: "Culto de Campanha",
-    date: "Todas as Quartas-Feiras",
+    date: "Toda Quarta-Feira",
     time: "19:30",
     location: "M. Encontro Betel - Vila Progresso",
     description: "Venha adorar e receber uma palavra de Deus que transformará sua vida.",
@@ -19,7 +19,7 @@ const EventsSection = () => {
 
   }, {
     title: "Culto de Campanha",
-    date: "Todas as Sextas-Feiras",
+    date: "Toda Sexta-Feira",
     time: "19:30",
     location: "M. Encontro Betel - Vila Progresso",
     description: "Um momento especial de adoração, louvor e palavra de Deus.",
@@ -30,7 +30,7 @@ const EventsSection = () => {
 
   }, {
     title: "Culto da Família",
-    date: "Todos os Domingos",
+    date: "Todo Domingo",
     time: "18:00",
     location: "M. Encontro Betel - Vila Progresso",
     description: "Louvor e Palavra de Deus para toda a família.",
@@ -42,7 +42,7 @@ const EventsSection = () => {
 
   const eventsVilaPalmira = [{
     title: "Culto de Campanha",
-    date: "Todas as Terças-Feiras",
+    date: "Toda Terças-Feira",
     time: "19:30",
     location: "M. Encontro Betel - Jardim Palmira",
     description: "Momento de intimidade e adoração ao Senhor.",
@@ -53,7 +53,7 @@ const EventsSection = () => {
   }, 
   {
       title: "Culto de Departamento",
-      date: "Todos os Sábados",
+      date: "Todo Sábado",
       time: "19:00",
       location: "M. Encontro Betel Sede - Jardim Palmira",
       description: "Culto noturno de adoração e ministração da Palavra.",
@@ -65,7 +65,7 @@ const EventsSection = () => {
     },
    {
     title: "Culto Da Família",
-    date: "Todos os Domingos",
+    date: "Todo Domingo",
     time: "18:00",
     location: "M. Encontro Betel Sede - Jardim Palmira",
     description: "Celebração com toda a família e ministração da Palavra.",

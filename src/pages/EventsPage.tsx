@@ -13,7 +13,7 @@ const EventsPage = () => {
     // Vila Progresso — iguais ao EventsSection
     {
       title: "Culto de Campanha",
-      date: "Todas as Quartas-Feiras",
+      date: "Toda Quarta-Feira",
       time: "19:30",
       location: "M. Encontro Betel - Vila Progresso",
       description: "Venha adorar e receber uma palavra de Deus que transformará sua vida.",
@@ -24,7 +24,7 @@ const EventsPage = () => {
     },
     {
       title: "Culto de Campanha",
-      date: "Todas as Sextas-Feiras",
+      date: "Toda Sexta-Feira",
       time: "19:30",
       location: "M. Encontro Betel - Vila Progresso",
       description: "Um momento especial de adoração, louvor e palavra de Deus.",
@@ -35,7 +35,7 @@ const EventsPage = () => {
     },    
     {
       title: "Círculo de Oração",
-      date: "Todas as Terças-Feiras",
+      date: "Toda Terça-Feira",
       time: "15:00",
       location: "M. Encontro Betel - Vila Progresso",
       description: "Círculo de oração e intercessão pela igreja e nação.",
@@ -46,7 +46,7 @@ const EventsPage = () => {
     },    
     {
       title: "Culto da Família",
-      date: "Todos os Domingos",
+      date: "Todo Domingo",
       time: "18:00",
       location: "M. Encontro Betel - Vila Progresso",
       description: "Louvor e Palavra de Deus para toda a família.",
@@ -57,7 +57,7 @@ const EventsPage = () => {
     },
      {
       title: "Consagração",
-      date: "Todos os Domingos",
+      date: "Todo Domingo",
       time: "09h00",
       location: "M. Encontro Betel - Vila Progresso",
       description: "Momento de consagração, oração e preparação espiritual.",
@@ -70,8 +70,8 @@ const EventsPage = () => {
     // Mantido — Ceia do Senhor (Vila Progresso)
     {
       title: "Ceia do Senhor",
-      date: "Todo Segundo Sábado",
-      time: "19:30",
+      date: "Todo Segundo Domingo",
+      time: "09:00",
       location: "M. Encontro Betel - Vila Progresso",
       description: "Ministração especial ( Ceia ).",
       type: "special",
@@ -83,7 +83,7 @@ const EventsPage = () => {
     // Sede Jardim Palmira — mantidos
     {
       title: "Culto de Campanha",
-      date: "Todas as Terças-Feiras",
+      date: "Toda Terça-Feira",
       time: "19:30",
       location: "M. Encontro Betel Sede Jardim Palmira",
       description: "Momento especial de adoração e louvor ao Senhor.",
@@ -95,7 +95,7 @@ const EventsPage = () => {
     },
     {
       title: "Culto Círculo de Oração",
-      date: "Todas as Quartas-Feiras",
+      date: "Toda Quarta-Feira",
       time: "15:00",
       location: "M. Encontro Betel Sede Jardim Palmira",
       description: "Círculo de oração e intercessão pela igreja e nação.",
@@ -107,7 +107,7 @@ const EventsPage = () => {
     },
     {
       title: "Culto de Departamento",
-      date: "Todos os Sábados",
+      date: "Todo Sábado",
       time: "19:00",
       location: "M. Encontro Betel Sede Jardim Palmira",
       description: "Culto noturno de adoração e ministração da Palavra.",
@@ -119,7 +119,7 @@ const EventsPage = () => {
     },
     {
       title: "Culto da Família",
-      date: "Todos os Domingos",
+      date: "Todo Domingo",
       time: "18:00",
       location: "M. Encontro Betel Sede Jardim Palmira",
       description: "Culto especial para toda a família com ministração da Palavra.",
